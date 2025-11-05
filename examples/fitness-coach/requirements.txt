@@ -1,0 +1,46 @@
+# DAML-RAG Framework 核心依赖
+daml-rag-framework
+
+# Web框架
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# 数据处理
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# 向量检索
+sentence-transformers==2.2.2
+faiss-cpu==1.7.4
+
+# 机器学习
+numpy==1.24.3
+scipy==1.11.4
+
+# 缓存
+redis==5.0.1
+
+# 数据库
+neo4j==5.14.1
+
+# 工具库
+python-multipart==0.0.6
+aiofiles==23.2.1
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# 监控和日志
+structlog==23.2.0
+rich==13.7.0
+
+# 开发工具
+pytest==7.4.3
+pytest-asyncio==0.21.1
+black==23.11.0
+isort==5.12.0
+mypy==1.7.1
+
+# 可选依赖（用于不同的嵌入模型）
+# openai>=1.0.0  # OpenAI嵌入模型
+# transformers>=4.35.0  # HuggingFace模型
+# torch>=2.0.0  # PyTorch（如果使用本地模型）
