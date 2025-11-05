@@ -8,9 +8,9 @@ authors:
   - family-names: "薛"
     given-names: "小川"
     alias: "Xue Xiaochuan"
-    email: "xuexiaochuan@example.com"
-repository-code: "https://github.com/build-body/daml-rag-framework"
-url: "https://github.com/build-body/daml-rag-framework"
+    email: "1765563156@qq.com"
+repository-code: "https://github.com/vivy1024/daml-rag-framework"
+url: "https://github.com/vivy1024/daml-rag-framework"
 license: Apache-2.0
 keywords:
   - rag
@@ -126,9 +126,11 @@ preferred-citation:
   type: software
   title: "DAML-RAG: Domain-Adaptive Meta-Learning RAG Framework"
   authors:
-    - name: "BUILD_BODY Team"
+    - family-names: "薛"
+      given-names: "小川"
+      alias: "Xue Xiaochuan"
   version: 1.0.0
-  year: 2024
-  url: "https://github.com/build-body/daml-rag-framework"
+  year: 2025
+  url: "https://github.com/vivy1024/daml-rag-framework"
   license: Apache-2.0
 

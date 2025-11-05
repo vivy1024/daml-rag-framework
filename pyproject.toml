@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "daml-rag-framework"
 version = "1.0.0"
 description = "Domain-Adaptive Meta-Learning RAG Framework for Vertical Domain AI Applications"
-readme = "README_ACADEMIC.md"
+readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "Apache-2.0"}
 keywords = [
@@ -27,10 +27,10 @@ keywords = [
     "model-context-protocol"
 ]
 authors = [
-    {name = "BUILD_BODY Team", email = "build-body-team@example.com"}
+    {name = "薛小川 (Xue Xiaochuan)", email = "1765563156@qq.com"}
 ]
 maintainers = [
-    {name = "BUILD_BODY Team", email = "build-body-team@example.com"}
+    {name = "薛小川 (Xue Xiaochuan)", email = "1765563156@qq.com"}
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -94,13 +94,13 @@ all = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/build-body/daml-rag-framework"
-Documentation = "https://github.com/build-body/daml-rag-framework/tree/main/docs"
-Repository = "https://github.com/build-body/daml-rag-framework"
-"Bug Tracker" = "https://github.com/build-body/daml-rag-framework/issues"
-Changelog = "https://github.com/build-body/daml-rag-framework/blob/main/CHANGELOG.md"
-"Theory Evolution" = "https://github.com/build-body/daml-rag-framework/blob/main/docs/theory/00-THEORY_EVOLUTION.md"
-"References" = "https://github.com/build-body/daml-rag-framework/blob/main/REFERENCES.md"
+Homepage = "https://github.com/vivy1024/daml-rag-framework"
+Documentation = "https://github.com/vivy1024/daml-rag-framework/tree/main/docs"
+Repository = "https://github.com/vivy1024/daml-rag-framework"
+"Bug Tracker" = "https://github.com/vivy1024/daml-rag-framework/issues"
+Changelog = "https://github.com/vivy1024/daml-rag-framework/blob/main/CHANGELOG.md"
+"Theory Evolution" = "https://github.com/vivy1024/daml-rag-framework/blob/main/docs/theory/00-THEORY_EVOLUTION.md"
+"References" = "https://github.com/vivy1024/daml-rag-framework/blob/main/REFERENCES.md"
 
 [project.scripts]
 daml-rag = "daml_rag_cli.cli:main"
