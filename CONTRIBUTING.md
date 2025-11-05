@@ -6,7 +6,7 @@
 
 ### 报告问题
 
-1. 检查 [Issues](https://github.com/daml-rag/daml-rag-framework/issues) 确认问题未被报告
+1. 检查 [Issues](https://github.com/vivy1024/daml-rag-framework/issues) 确认问题未被报告
 2. 创建新的 Issue，使用适当的模板
 3. 提供详细的问题描述、复现步骤和期望行为
 
@@ -22,7 +22,7 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/daml-rag/daml-rag-framework.git
+git clone https://github.com/vivy1024/daml-rag-framework.git
 cd daml-rag-framework
 
 # 创建虚拟环境
@@ -294,9 +294,10 @@ def mock_retriever():
 
 ### 沟通渠道
 
-- [GitHub Discussions](https://github.com/daml-rag/daml-rag-framework/discussions)
-- [Discord 社区](https://discord.gg/daml-rag)
-- [邮件列表](mailto:dev@daml-rag.org)
+- [GitHub Discussions](https://github.com/vivy1024/daml-rag-framework/discussions)
+- [GitHub Issues](https://github.com/vivy1024/daml-rag-framework/issues) - 问题反馈
+- [Discord 社区](https://discord.gg/KDtg69cy) - 实时讨论
+- 邮件：[1765563156@qq.com](mailto:1765563156@qq.com)
 
 ## 🙏 致谢
 
@@ -304,9 +305,7 @@ def mock_retriever():
 
 ### 核心贡献者
 
-- [@contributor1](https://github.com/contributor1) - 核心框架
-- [@contributor2](https://github.com/contributor2) - 健身适配器
-- [@contributor3](https://github.com/contributor3) - 文档
+- **薛小川** ([@vivy1024](https://github.com/vivy1024)) - 项目作者，核心框架设计与实现
 
 ### 特别感谢
 
@@ -316,4 +315,7 @@ def mock_retriever():
 
 ---
 
-有任何问题，欢迎通过 GitHub Issues 或邮件联系我们：[team@daml-rag.org](mailto:team@daml-rag.org)
+有任何问题，欢迎通过 [GitHub Issues](https://github.com/vivy1024/daml-rag-framework/issues) 或邮件联系：[1765563156@qq.com](mailto:1765563156@qq.com)
+
+**项目作者**：薛小川 ([@vivy1024](https://github.com/vivy1024))  
+**版权所有 © 2025 薛小川。保留所有权利。**
