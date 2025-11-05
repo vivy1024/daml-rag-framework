@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-玉珍健身 框架 Neo4j知识图谱实现
+DAML-RAG 框架 Neo4j知识图谱实现
 专业图数据库支持，用于结构化关系推理
 """
 
@@ -188,10 +188,11 @@ class Neo4jKnowledgeRetriever(BaseKnowledgeGraphRetriever):
         if not properties:
             properties = {}
 
-        query = """
+        query = f"""
         MATCH (a), (b)
         WHERE a.id = $from_id AND b.id = $to_id
-        CREATE (a)-[r:""""+relationship_type+""" {props}]->(b)
+        CREATE (a)-[r:{relationship_type}]->(b)
+        SET r += $props
         RETURN r
         """
 
@@ -331,11 +332,11 @@ class Neo4jKnowledgeRetriever(BaseKnowledgeGraphRetriever):
     ) -> List[Dict[str, Any]]:
         """图遍历查询"""
         if direction == "outgoing":
-            match_pattern = "(start)-[r*1..{max_depth}]->(end)"
+            match_pattern = f"(start)-[r*1..{max_depth}]->(end)"
         elif direction == "incoming":
-            match_pattern = "(start)<-[r*1..{max_depth}]-(end)"
+            match_pattern = f"(start)<-[r*1..{max_depth}]-(end)"
         else:  # both
-            match_pattern = "(start)-[r*1..{max_depth}]-(end)"
+            match_pattern = f"(start)-[r*1..{max_depth}]-(end)"
 
         query_parts = [
             "MATCH (start) WHERE start.id = $start_id",
@@ -347,7 +348,7 @@ class Neo4jKnowledgeRetriever(BaseKnowledgeGraphRetriever):
         # 添加关系类型过滤
         if relationship_types:
             rel_types_str = "|".join(relationship_types)
-            query_parts[-1] = query_parts[-1].replace("[r*", f"[r:{rel_types}*")
+            query_parts[-1] = query_parts[-1].replace("[r*", f"[r:{rel_types_str}*")
             parameters["relationship_types"] = relationship_types
 
         # 添加节点过滤
@@ -395,7 +396,7 @@ class Neo4jKnowledgeRetriever(BaseKnowledgeGraphRetriever):
         if relationship_types:
             rel_types_str = "|".join(relationship_types)
             query_parts.append(
-                f"MATCH p = shortestPath((start)-[*1..{max_depth}:{rel_types}*]-(end))"
+                f"MATCH p = shortestPath((start)-[*1..{max_depth}:{rel_types_str}]-(end))"
             )
         else:
             query_parts.append(
