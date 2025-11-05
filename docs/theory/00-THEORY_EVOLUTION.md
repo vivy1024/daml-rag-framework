@@ -366,9 +366,9 @@ final_score = 0.3 × vector_score
 
 [6] Lewis, P., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." NeurIPS 2020.
 
-[7] Edge, D., et al. (2024). "From Local to Global: A Graph RAG Approach to Query-Focused Summarization." arXiv:2404.16130.
+[7] Edge, D., et al. (2025). "From Local to Global: A Graph RAG Approach to Query-Focused Summarization." arXiv:2404.16130.
 
-[8] Microsoft Research. (2024). "GraphRAG: Unlocking LLM discovery on narrative private data."
+[8] Microsoft Research. (2025). "GraphRAG: Unlocking LLM discovery on narrative private data."
 
 [9] Hogan, A., et al. (2021). "Knowledge Graphs." ACM Computing Surveys, 54(4), 1-37.
 

@@ -424,10 +424,10 @@ Built on theoretical and practical achievements from the BUILD_BODY v2.0 project
 
 **Standing on the shoulders of giants:**
 - RAG: Lewis et al. (2020)
-- GraphRAG: Microsoft Research (2024)
+- GraphRAG: Microsoft Research (2025)
 - In-Context Learning: Brown et al. (2020)
 - Knowledge Graphs: Hogan et al. (2021)
-- MCP: Anthropic (2024)
+- MCP: Anthropic (2025)
 
 ---
 

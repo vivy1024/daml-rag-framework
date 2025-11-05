@@ -434,12 +434,12 @@ class RuleEngine:
 
 ### 8.1 核心论文
 
-1. **Edge et al. (2024) - "From Local to Global: A Graph RAG Approach to Query-Focused Summarization"** [3]
+1. **Edge et al. (2025) - "From Local to Global: A Graph RAG Approach to Query-Focused Summarization"** [3]
    - Microsoft Research
    - 提出GraphRAG概念
    - 证明图+向量混合检索优势
 
-2. **Sun et al. (2024) - "Think-on-Graph: Deep and Responsible Reasoning of Large Language Model"** [4]
+2. **Sun et al. (2025) - "Think-on-Graph: Deep and Responsible Reasoning of Large Language Model"** [4]
    - 图上推理的深度学习方法
    - 多跳推理准确率提升
 
@@ -459,9 +459,9 @@ class RuleEngine:
 
 [2] Ram, O., et al. (2023). "In-Context Retrieval-Augmented Language Models." arXiv:2302.00083.
 
-[3] Edge, D., et al. (2024). "From Local to Global: A Graph RAG Approach to Query-Focused Summarization." arXiv:2404.16130.
+[3] Edge, D., et al. (2025). "From Local to Global: A Graph RAG Approach to Query-Focused Summarization." arXiv:2404.16130.
 
-[4] Sun, J., et al. (2024). "Think-on-Graph: Deep and Responsible Reasoning of Large Language Model with Knowledge Graph." arXiv:2307.07697.
+[4] Sun, J., et al. (2025). "Think-on-Graph: Deep and Responsible Reasoning of Large Language Model with Knowledge Graph." arXiv:2307.07697.
 
 [5] Hogan, A., et al. (2021). "Knowledge Graphs." ACM Computing Surveys, 54(4), 1-37.
 

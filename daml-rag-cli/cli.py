@@ -43,7 +43,7 @@ class DAMLRAGCLI:
   daml-rag health                                  # 健康检查
   daml-rag config show                              # 显示配置
 
-更多信息请访问: https://github.com/daml-rag/daml-rag-framework
+更多信息请访问: https://github.com/vivy1024/daml-rag-framework
             """
         )
 

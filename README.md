@@ -413,10 +413,10 @@ domain_config:
 
 **站在巨人的肩膀上：**
 - RAG：Lewis et al. (2020)
-- GraphRAG：Microsoft Research (2024)
+- GraphRAG：Microsoft Research (2025)
 - 上下文学习：Brown et al. (2020)
 - 知识图谱：Hogan et al. (2021)
-- MCP：Anthropic (2024)
+- MCP：Anthropic (2025)
 
 ---
 

@@ -160,4 +160,4 @@ class InitCommand(BaseCommand):
 
         print(f"\n🔗 更多信息:")
         print(f"- 项目文档: https://docs.daml-rag.org")
-        print(f"- GitHub: https://github.com/daml-rag/daml-rag-framework")
+        print(f"- GitHub: https://github.com/vivy1024/daml-rag-framework")

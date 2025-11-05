@@ -437,8 +437,8 @@ daml-rag status --detailed
 ## 🤝 获取帮助
 
 - 📖 [官方文档](https://docs.daml-rag.org)
-- 💬 [社区讨论](https://github.com/daml-rag/daml-rag-framework/discussions)
-- 🐛 [问题反馈](https://github.com/daml-rag/daml-rag-framework/issues)
+- 💬 [社区讨论](https://github.com/vivy1024/daml-rag-framework/discussions)
+- 🐛 [问题反馈](https://github.com/vivy1024/daml-rag-framework/issues)
 - 📧 [邮件支持](mailto:support@daml-rag.org)
 
 ---

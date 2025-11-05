@@ -5,8 +5,8 @@ DAML-RAG Framework - Domain-Adaptive Meta-Learning RAG
 """
 
 __version__ = "1.0.0"
-__author__ = "DAML-RAG Team"
-__email__ = "team@daml-rag.org"
+__author__ = "薛小川 (Xue Xiaochuan)"
+__email__ = "1765563156@qq.com"
 __license__ = "Apache 2.0"
 
 from .core import DAMLRAGFramework

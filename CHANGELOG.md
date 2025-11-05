@@ -116,7 +116,7 @@
 - 邮件：[1765563156@qq.com](mailto:1765563156@qq.com)
 
 
-完整的贡献者列表：[Contributors](https://github.com/daml-rag/daml-rag-framework/graphs/contributors)
+完整的贡献者列表：[Contributors](https://github.com/vivy1024/daml-rag-framework/graphs/contributors)
 
 ---
 
@@ -145,6 +145,6 @@
 ## 反馈和支持
 
 - 📧 [邮件支持](mailto:1765563156@qq.com)
-- 💬 [GitHub Discussions](https://github.com/daml-rag/daml-rag-framework/discussions)
-- 🐛 [问题反馈](https://github.com/daml-rag/daml-rag-framework/issues)
+- 💬 [GitHub Discussions](https://github.com/vivy1024/daml-rag-framework/discussions)
+- 🐛 [问题反馈](https://github.com/vivy1024/daml-rag-framework/issues)
 - 📖 [官方文档](https://docs.daml-rag.org)

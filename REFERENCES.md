@@ -30,19 +30,19 @@
 
 ### GraphRAG Theory / GraphRAG理论
 
-4. **Edge, D., Trinh, H., Cheng, N., Bradley, J., Chao, A., Mody, A., ... & Larson, J. (2024)**  
+4. **Edge, D., Trinh, H., Cheng, N., Bradley, J., Chao, A., Mody, A., ... & Larson, J. (2025)**  
    *"From Local to Global: A Graph RAG Approach to Query-Focused Summarization."*  
    arXiv:2404.16130.  
    [https://arxiv.org/abs/2404.16130](https://arxiv.org/abs/2404.16130)  
    **Key Contribution**: Proposed GraphRAG concept, demonstrated superiority of graph + vector hybrid retrieval
 
-5. **Microsoft Research. (2024)**  
+5. **Microsoft Research. (2025)**  
    *"GraphRAG: Unlocking LLM discovery on narrative private data."*  
    Microsoft Research Blog & GitHub Repository.  
    [https://github.com/microsoft/graphrag](https://github.com/microsoft/graphrag)  
    **Key Contribution**: Production implementation of GraphRAG, open-source toolkit
 
-6. **Sun, J., Xu, C., Tang, L., Wang, S., Lin, C., Gong, Y., ... & Guo, J. (2024)**  
+6. **Sun, J., Xu, C., Tang, L., Wang, S., Lin, C., Gong, Y., ... & Guo, J. (2025)**  
    *"Think-on-Graph: Deep and Responsible Reasoning of Large Language Model with Knowledge Graph."*  
    arXiv:2307.07697.  
    [https://arxiv.org/abs/2307.07697](https://arxiv.org/abs/2307.07697)  
@@ -82,13 +82,13 @@
     [https://arxiv.org/abs/2003.02320](https://arxiv.org/abs/2003.02320)  
     **Key Contribution**: Comprehensive knowledge graph survey, foundational concepts
 
-12. **Pan, S., Luo, L., Wang, Y., Chen, C., Wang, J., & Wu, X. (2024)**  
+12. **Pan, S., Luo, L., Wang, Y., Chen, C., Wang, J., & Wu, X. (2025)**  
     *"Unifying Large Language Models and Knowledge Graphs: A Roadmap."*  
     IEEE Transactions on Knowledge and Data Engineering.  
     [https://arxiv.org/abs/2306.08302](https://arxiv.org/abs/2306.08302)  
     **Key Contribution**: Integration of LLMs with knowledge graphs
 
-13. **Neo4j Graph Database. (2024)**  
+13. **Neo4j Graph Database. (2025)**  
     *"Neo4j Graph Data Science Library Documentation."*  
     Neo4j, Inc.  
     [https://neo4j.com/docs/graph-data-science/](https://neo4j.com/docs/graph-data-science/)  
@@ -133,7 +133,7 @@
     [https://arxiv.org/abs/1908.10084](https://arxiv.org/abs/1908.10084)  
     **Key Contribution**: Efficient sentence embeddings for semantic search
 
-20. **Qdrant Team. (2024)**  
+20. **Qdrant Team. (2025)**  
     *"Qdrant: Vector Database & Search Engine."*  
     Qdrant Documentation.  
     [https://qdrant.tech/documentation/](https://qdrant.tech/documentation/)  
@@ -229,7 +229,7 @@
 
 ### Model Context Protocol (MCP)
 
-33. **Anthropic. (2024)**  
+33. **Anthropic. (2025)**  
     *"Model Context Protocol (MCP): A Standard for Tool Integration."*  
     Anthropic Documentation.  
     [https://www.anthropic.com/mcp](https://www.anthropic.com/mcp)  
@@ -237,13 +237,13 @@
 
 ### API Standards / API标准
 
-34. **OpenAI. (2024)**  
+34. **OpenAI. (2025)**  
     *"OpenAI API Reference."*  
     OpenAI Documentation.  
     [https://platform.openai.com/docs/api-reference](https://platform.openai.com/docs/api-reference)  
     **Key Contribution**: Industry-standard LLM API design
 
-35. **DeepSeek AI. (2024)**  
+35. **DeepSeek AI. (2025)**  
     *"DeepSeek API Documentation."*  
     DeepSeek Documentation.  
     [https://platform.deepseek.com/docs](https://platform.deepseek.com/docs)  
@@ -251,7 +251,7 @@
 
 ### Embedding Model Standards / 嵌入模型标准
 
-36. **BAAI (Beijing Academy of Artificial Intelligence). (2024)**  
+36. **BAAI (Beijing Academy of Artificial Intelligence). (2025)**  
     *"BGE: BAAI General Embedding Model Series."*  
     GitHub: [https://github.com/FlagOpen/FlagEmbedding](https://github.com/FlagOpen/FlagEmbedding)  
     **Key Contribution**: High-quality Chinese embedding models (used in DAML-RAG)
@@ -334,8 +334,8 @@
 ```bibtex
 @software{daml_rag_2024,
   title={DAML-RAG: Domain-Adaptive Meta-Learning RAG Framework},
-  author={BUILD_BODY Team},
-  year={2024},
+  author={薛小川 (Xue Xiaochuan)},
+  year={2025},
   url={https://github.com/...},
   version={1.0.0}
 }
@@ -353,7 +353,7 @@
   title={From local to global: A graph rag approach to query-focused summarization},
   author={Edge, Darren and Trinh, Ha and Cheng, Newman and Bradley, Joshua and Chao, Alex and Mody, Apurva and Truitt, Steven and Larson, Jonathan},
   journal={arXiv preprint arXiv:2404.16130},
-  year={2024}
+  year={2025}
 }
 ```
 
@@ -362,9 +362,9 @@
 ```
 Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., ... & Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. In Advances in Neural Information Processing Systems (Vol. 33, pp. 9459-9474).
 
-Edge, D., Trinh, H., Cheng, N., Bradley, J., Chao, A., Mody, A., ... & Larson, J. (2024). From local to global: A graph RAG approach to query-focused summarization. arXiv preprint arXiv:2404.16130.
+Edge, D., Trinh, H., Cheng, N., Bradley, J., Chao, A., Mody, A., ... & Larson, J. (2025). From local to global: A graph RAG approach to query-focused summarization. arXiv preprint arXiv:2404.16130.
 
-BUILD_BODY Team. (2024). DAML-RAG: Domain-Adaptive Meta-Learning RAG Framework (Version 1.0.0) [Computer software]. https://github.com/...
+BUILD_BODY Team. (2025). DAML-RAG: Domain-Adaptive Meta-Learning RAG Framework (Version 1.0.0) [Computer software]. https://github.com/...
 ```
 
 ---

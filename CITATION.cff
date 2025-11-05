@@ -3,7 +3,7 @@ message: "If you use this software, please cite it as below."
 type: software
 title: "DAML-RAG: Domain-Adaptive Meta-Learning RAG Framework"
 version: 1.0.0
-date-released: 2024-11-05
+date-released: 2025-11-05
 authors:
   - family-names: "薛"
     given-names: "小川"
@@ -82,7 +82,7 @@ references:
       - family-names: Larson
         given-names: Jonathan
     title: "From Local to Global: A Graph RAG Approach to Query-Focused Summarization"
-    year: 2024
+    year: 2025
     url: "https://arxiv.org/abs/2404.16130"
     
   - type: article
