@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健身教练助手 - DAML-RAG Framework</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        .chat-container {
+            height: calc(100vh - 200px);
+        }
+
+        .message-bubble {
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .typing-indicator {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .health-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .health-healthy { background-color: #10b981; }
+        .health-degraded { background-color: #f59e0b; }
+        .health-unhealthy { background-color: #ef4444; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- 头部导航 -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <i class="fas fa-dumbbell text-blue-600 text-2xl mr-3"></i>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">健身教练助手</h1>
+                        <p class="text-xs text-gray-500">基于 DAML-RAG Framework</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center text-sm text-gray-600">
+                        <span>系统状态:</span>
+                        <span id="health-status" class="health-indicator health-healthy ml-2"></span>
+                        <span id="health-text" class="ml-1">健康</span>
+                    </div>
+                    <button id="clear-chat" class="px-3 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded-md transition-colors">
+                        <i class="fas fa-trash mr-1"></i>清空对话
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <!-- 侧边栏 -->
+            <div class="lg:col-span-1">
+                <!-- 统计信息 -->
+                <div class="bg-white rounded-lg shadow p-4 mb-4">
+                    <h3 class="font-semibold text-gray-900 mb-3">
+                        <i class="fas fa-chart-line mr-2"></i>系统统计
+                    </h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">总查询数:</span>
+                            <span id="total-queries" class="font-medium">0</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">平均响应时间:</span>
+                            <span id="avg-response-time" class="font-medium">0ms</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">活跃会话:</span>
+                            <span id="active-sessions" class="font-medium">1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 快捷问题 -->
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="font-semibold text-gray-900 mb-3">
+                        <i class="fas fa-lightbulb mr-2"></i>快捷问题
+                    </h3>
+                    <div class="space-y-2">
+                        <button class="quick-question w-full text-left px-3 py-2 bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-md transition-colors text-sm"
+                                data-question="我想制定一个增肌计划">
+                            💪 制定增肌计划
+                        </button>
+                        <button class="quick-question w-full text-left px-3 py-2 bg-green-50 hover:bg-green-100 text-green-700 rounded-md transition-colors text-sm"
+                                data-question="深蹲的正确动作要领是什么？">
+                            🏋️ 深蹲动作指导
+                        </button>
+                        <button class="quick-question w-full text-left px-3 py-2 bg-yellow-50 hover:bg-yellow-100 text-yellow-700 rounded-md transition-colors text-sm"
+                                data-question="膝盖有旧伤，如何安全训练腿部？">
+                            🏥 损伤康复咨询
+                        </button>
+                        <button class="quick-question w-full text-left px-3 py-2 bg-purple-50 hover:bg-purple-100 text-purple-700 rounded-md transition-colors text-sm"
+                                data-question="增肌期间应该如何安排饮食？">
+                            🥗 营养饮食建议
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 功能介绍 -->
+                <div class="bg-white rounded-lg shadow p-4 mt-4">
+                    <h3 class="font-semibold text-gray-900 mb-3">
+                        <i class="fas fa-info-circle mr-2"></i>功能特性
+                    </h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• 智能对话交互</li>
+                        <li>• 个性化训练计划</li>
+                        <li>• 运动损伤康复指导</li>
+                        <li>• 营养饮食建议</li>
+                        <li>• 实时性能监控</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 聊天区域 -->
+            <div class="lg:col-span-3">
+                <div class="bg-white rounded-lg shadow h-full flex flex-col">
+                    <!-- 聊天头部 -->
+                    <div class="border-b px-4 py-3">
+                        <div class="flex items-center justify-between">
+                            <h2 class="font-semibold text-gray-900">
+                                <i class="fas fa-comments mr-2"></i>智能对话
+                            </h2>
+                            <div class="text-sm text-gray-500">
+                                <span id="session-id">会话: 连接中...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 消息区域 -->
+                    <div id="chat-messages" class="chat-container flex-1 overflow-y-auto p-4 space-y-4">
+                        <!-- 欢迎消息 -->
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-robot text-white text-sm"></i>
+                            </div>
+                            <div class="ml-3 max-w-md">
+                                <div class="bg-blue-50 rounded-lg p-3 message-bubble">
+                                    <p class="text-sm text-blue-900">
+                                        你好！我是你的健身教练助手。我可以帮助你：
+                                    </p>
+                                    <ul class="text-sm text-blue-800 mt-2 space-y-1">
+                                        <li>制定个性化训练计划</li>
+                                        <li>提供动作指导和技巧</li>
+                                        <li>运动损伤康复建议</li>
+                                        <li>营养和饮食指导</li>
+                                    </ul>
+                                    <p class="text-sm text-blue-900 mt-2">
+                                        请告诉我你的健身目标或问题吧！
+                                    </p>
+                                </div>
+                                <p class="text-xs text-gray-500 mt-1">AI健身教练</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 输入区域 -->
+                    <div class="border-t p-4">
+                        <div class="flex space-x-2">
+                            <input
+                                type="text"
+                                id="message-input"
+                                placeholder="输入你的健身问题..."
+                                class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                maxlength="500"
+                            >
+                            <button
+                                id="send-button"
+                                class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                            >
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="mt-2 flex justify-between items-center text-xs text-gray-500">
+                            <span id="char-count">0 / 500</span>
+                            <span id="model-info" class="hidden">
+                                <i class="fas fa-microchip mr-1"></i>
+                                <span id="model-name">准备就绪</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="text-sm">
+                    <p>© 2025 健身教练助手 - 基于 DAML-RAG Framework</p>
+                </div>
+                <div class="text-sm">
+                    <span>技术支持: </span>
+                    <a href="https://github.com/daml-rag/daml-rag-framework" class="text-blue-400 hover:text-blue-300" target="_blank">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        class FitnessCoachApp {
+            constructor() {
+                this.sessionId = null;
+                this.isConnected = false;
+                this.ws = null;
+                this.init();
+            }
+
+            init() {
+                this.setupEventListeners();
+                this.connectWebSocket();
+                this.loadStats();
+            }
+
+            setupEventListeners() {
+                // 发送按钮
+                document.getElementById('send-button').addEventListener('click', () => {
+                    this.sendMessage();
+                });
+
+                // 输入框
+                const input = document.getElementById('message-input');
+                input.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        this.sendMessage();
+                    }
+                });
+
+                // 字符计数
+                input.addEventListener('input', (e) => {
+                    const length = e.target.value.length;
+                    document.getElementById('char-count').textContent = `${length} / 500`;
+
+                    const sendBtn = document.getElementById('send-button');
+                    sendBtn.disabled = length === 0 || !this.isConnected;
+                });
+
+                // 快捷问题
+                document.querySelectorAll('.quick-question').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const question = e.target.dataset.question;
+                        document.getElementById('message-input').value = question;
+                        document.getElementById('char-count').textContent = `${question.length} / 500`;
+                        this.sendMessage();
+                    });
+                });
+
+                // 清空对话
+                document.getElementById('clear-chat').addEventListener('click', () => {
+                    this.clearChat();
+                });
+            }
+
+            async connectWebSocket() {
+                try {
+                    // 先创建会话
+                    const response = await fetch('/api/chat', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            message: '你好，请开始我们的对话',
+                            user_id: 'web_user'
+                        })
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        this.sessionId = data.session_id;
+                        this.isConnected = true;
+
+                        document.getElementById('session-id').textContent = `会话: ${this.sessionId.slice(-8)}`;
+                        document.getElementById('send-button').disabled = false;
+
+                        this.addMessage('user', '你好，请开始我们的对话');
+                        this.addMessage('assistant', data.response, data.sources, data.model_used, data.execution_time);
+
+                        // 显示模型信息
+                        this.showModelInfo(data.model_used);
+                    } else {
+                        throw new Error('创建会话失败');
+                    }
+                } catch (error) {
+                    console.error('连接失败:', error);
+                    this.addMessage('system', '连接服务器失败，请刷新页面重试');
+                }
+            }
+
+            async sendMessage() {
+                const input = document.getElementById('message-input');
+                const message = input.value.trim();
+
+                if (!message || !this.isConnected) return;
+
+                // 添加用户消息
+                this.addMessage('user', message);
+
+                // 清空输入框
+                input.value = '';
+                document.getElementById('char-count').textContent = '0 / 500';
+                document.getElementById('send-button').disabled = true;
+
+                try {
+                    // 显示正在输入
+                    this.showTypingIndicator();
+
+                    const response = await fetch('/api/chat', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            message: message,
+                            user_id: 'web_user',
+                            session_id: this.sessionId
+                        })
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        this.hideTypingIndicator();
+                        this.addMessage('assistant', data.response, data.sources, data.model_used, data.execution_time);
+                        this.showModelInfo(data.model_used);
+                        this.updateStats();
+                    } else {
+                        throw new Error('发送消息失败');
+                    }
+                } catch (error) {
+                    console.error('发送消息失败:', error);
+                    this.hideTypingIndicator();
+                    this.addMessage('system', '发送消息失败，请重试');
+                } finally {
+                    document.getElementById('send-button').disabled = false;
+                }
+            }
+
+            addMessage(type, content, sources = [], model = '', executionTime = 0) {
+                const messagesContainer = document.getElementById('chat-messages');
+
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'flex items-start message-bubble';
+
+                if (type === 'user') {
+                    messageDiv.innerHTML = `
+                        <div class="ml-3 max-w-md">
+                            <div class="bg-gray-100 rounded-lg p-3">
+                                <p class="text-sm text-gray-900">${this.escapeHtml(content)}</p>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1 text-right">你</p>
+                        </div>
+                        <div class="flex-shrink-0 w-8 h-8 bg-gray-400 rounded-full flex items-center justify-center ml-3">
+                            <i class="fas fa-user text-white text-sm"></i>
+                        </div>
+                    `;
+                } else if (type === 'assistant') {
+                    let sourceHtml = '';
+                    if (sources && sources.length > 0) {
+                        sourceHtml = `
+                            <div class="mt-2 p-2 bg-blue-100 rounded text-xs">
+                                <span class="font-medium text-blue-800">信息来源:</span>
+                                <span class="text-blue-600">${sources.length} 个相关知识</span>
+                            </div>
+                        `;
+                    }
+
+                    let metaHtml = '';
+                    if (model || executionTime > 0) {
+                        metaHtml = `
+                            <div class="flex items-center space-x-2 text-xs text-gray-500 mt-1">
+                                ${model ? `<span><i class="fas fa-microchip mr-1"></i>${model}</span>` : ''}
+                                ${executionTime > 0 ? `<span><i class="fas fa-clock mr-1"></i>${executionTime.toFixed(2)}s</span>` : ''}
+                            </div>
+                        `;
+                    }
+
+                    messageDiv.innerHTML = `
+                        <div class="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-robot text-white text-sm"></i>
+                        </div>
+                        <div class="ml-3 max-w-md">
+                            <div class="bg-blue-50 rounded-lg p-3">
+                                <p class="text-sm text-blue-900">${this.escapeHtml(content)}</p>
+                                ${sourceHtml}
+                            </div>
+                            ${metaHtml}
+                            <p class="text-xs text-gray-500 mt-1">AI健身教练</p>
+                        </div>
+                    `;
+                } else if (type === 'system') {
+                    messageDiv.innerHTML = `
+                        <div class="w-full">
+                            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-3 text-center">
+                                <p class="text-sm text-yellow-800">
+                                    <i class="fas fa-exclamation-triangle mr-1"></i>
+                                    ${this.escapeHtml(content)}
+                                </p>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                messagesContainer.appendChild(messageDiv);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+
+            showTypingIndicator() {
+                const messagesContainer = document.getElementById('chat-messages');
+                const indicatorDiv = document.createElement('div');
+                indicatorDiv.id = 'typing-indicator';
+                indicatorDiv.className = 'flex items-start message-bubble';
+                indicatorDiv.innerHTML = `
+                    <div class="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-robot text-white text-sm"></i>
+                    </div>
+                    <div class="ml-3">
+                        <div class="bg-blue-50 rounded-lg p-3">
+                            <div class="typing-indicator flex space-x-1">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                messagesContainer.appendChild(indicatorDiv);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+
+            hideTypingIndicator() {
+                const indicator = document.getElementById('typing-indicator');
+                if (indicator) {
+                    indicator.remove();
+                }
+            }
+
+            showModelInfo(model) {
+                const modelInfo = document.getElementById('model-info');
+                const modelName = document.getElementById('model-name');
+
+                modelInfo.classList.remove('hidden');
+                modelName.textContent = model || '未知模型';
+
+                // 3秒后隐藏
+                setTimeout(() => {
+                    modelInfo.classList.add('hidden');
+                }, 3000);
+            }
+
+            clearChat() {
+                const messagesContainer = document.getElementById('chat-messages');
+                messagesContainer.innerHTML = `
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-robot text-white text-sm"></i>
+                        </div>
+                        <div class="ml-3 max-w-md">
+                            <div class="bg-blue-50 rounded-lg p-3 message-bubble">
+                                <p class="text-sm text-blue-900">对话已清空，有什么可以帮助你的吗？</p>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1">AI健身教练</p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+
+            async loadStats() {
+                try {
+                    const response = await fetch('/api/stats');
+                    if (response.ok) {
+                        const stats = await response.json();
+                        this.updateStatsDisplay(stats);
+                    }
+                } catch (error) {
+                    console.error('加载统计信息失败:', error);
+                }
+            }
+
+            updateStatsDisplay(stats) {
+                if (stats.framework && stats.framework.query_stats) {
+                    document.getElementById('total-queries').textContent =
+                        stats.framework.query_stats.total_queries;
+                    document.getElementById('avg-response-time').textContent =
+                        (stats.framework.query_stats.average_response_time * 1000).toFixed(0) + 'ms';
+                }
+                if (stats.sessions) {
+                    document.getElementById('active-sessions').textContent =
+                        stats.sessions.active;
+                }
+            }
+
+            async updateStats() {
+                await this.loadStats();
+            }
+
+            async checkHealth() {
+                try {
+                    const response = await fetch('/api/health');
+                    if (response.ok) {
+                        const health = await response.json();
+                        this.updateHealthIndicator(health);
+                    }
+                } catch (error) {
+                    console.error('健康检查失败:', error);
+                }
+            }
+
+            updateHealthIndicator(health) {
+                const indicator = document.getElementById('health-status');
+                const text = document.getElementById('health-text');
+
+                indicator.className = 'health-indicator';
+
+                if (health.status === 'healthy') {
+                    indicator.classList.add('health-healthy');
+                    text.textContent = '健康';
+                } else if (health.status === 'degraded') {
+                    indicator.classList.add('health-degraded');
+                    text.textContent = '降级';
+                } else {
+                    indicator.classList.add('health-unhealthy');
+                    text.textContent = '异常';
+                }
+            }
+        }
+
+        // 初始化应用
+        document.addEventListener('DOMContentLoaded', () => {
+            new FitnessCoachApp();
+
+            // 定期检查健康状态
+            setInterval(() => {
+                const app = new FitnessCoachApp();
+                app.checkHealth();
+            }, 30000);
+        });
+    </script>
+</body>
+</html>

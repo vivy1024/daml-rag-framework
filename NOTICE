@@ -1,0 +1,55 @@
+DAML-RAG Framework
+Copyright 2025 薛小川 (Xue Xiaochuan)
+
+This product includes software developed by 薛小川 as part of the BUILD_BODY project.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+================================================================================
+
+This project incorporates components from the following open source projects:
+
+1. FastAPI (https://fastapi.tiangolo.com/)
+   License: MIT License
+   Copyright (c) 2018 Sebastián Ramírez
+
+2. Neo4j Python Driver (https://neo4j.com/)
+   License: Apache License 2.0
+   Copyright (c) Neo4j, Inc.
+
+3. Qdrant Client (https://qdrant.tech/)
+   License: Apache License 2.0
+   Copyright (c) Qdrant Solutions
+
+4. Pydantic (https://pydantic-docs.helpmanual.io/)
+   License: MIT License
+   Copyright (c) 2017 Samuel Colvin
+
+5. httpx (https://www.python-httpx.org/)
+   License: BSD 3-Clause License
+   Copyright (c) 2019 Encode OSS Ltd.
+
+For a complete list of dependencies, see requirements.txt
+
+================================================================================
+
+Third-Party Academic References:
+
+This framework builds upon theoretical foundations from:
+- RAG: Lewis et al. (2020) "Retrieval-Augmented Generation"
+- GraphRAG: Microsoft Research (2024)
+- In-Context Learning: Brown et al. (2020) GPT-3 paper
+- Knowledge Graphs: Hogan et al. (2021)
+
+See REFERENCES.md for complete bibliography.
+
