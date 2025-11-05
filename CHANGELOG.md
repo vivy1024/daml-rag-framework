@@ -110,15 +110,11 @@
 
 感谢以下贡献者让 DAML-RAG Framework 变得更好：
 
-### 核心团队
-- [@creator](https://github.com/creator) - 项目创建者和维护者
-- [@maintainer1](https://github.com/maintainer1) - 核心框架开发
-- [@maintainer2](https://github.com/maintainer2) - 领域适配器开发
+- [GitHub Discussions](https://github.com/vivy1024/daml-rag-framework/discussions)
+- [GitHub Issues](https://github.com/vivy1024/daml-rag-framework/issues) - 问题反馈
+- [Discord 社区](https://discord.gg/KDtg69cy) - 实时讨论
+- 邮件：[1765563156@qq.com](mailto:1765563156@qq.com)
 
-### 社区贡献者
-- [@contributor1](https://github.com/contributor1) - 文档改进
-- [@contributor2](https://github.com/contributor2) - Bug 修复
-- [@contributor3](https://github.com/contributor3) - 测试用例
 
 完整的贡献者列表：[Contributors](https://github.com/daml-rag/daml-rag-framework/graphs/contributors)
 
@@ -148,7 +144,7 @@
 
 ## 反馈和支持
 
-- 📧 [邮件支持](mailto:support@daml-rag.org)
+- 📧 [邮件支持](mailto:1765563156@qq.com)
 - 💬 [GitHub Discussions](https://github.com/daml-rag/daml-rag-framework/discussions)
 - 🐛 [问题反馈](https://github.com/daml-rag/daml-rag-framework/issues)
 - 📖 [官方文档](https://docs.daml-rag.org)
