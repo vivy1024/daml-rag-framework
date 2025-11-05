@@ -176,7 +176,7 @@ class LoggingConfig:
 
     # 文件日志配置
     log_to_file: bool = True
-    log_file_path: str = "./logs/daml-rag.log"
+    log_file_path: str = "./logs/玉珍健身.log"
     log_file_rotation: bool = True
     log_max_file_size: int = 10 * 1024 * 1024  # 10MB
     log_backup_count: int = 5
@@ -191,7 +191,7 @@ class LoggingConfig:
 
 @dataclass
 class DAMLRAGConfig:
-    """DAML-RAG框架主配置"""
+    """玉珍健身框架主配置"""
     # 核心配置
     domain: str = "fitness"
     debug: bool = False

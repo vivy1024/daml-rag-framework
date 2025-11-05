@@ -1,5 +1,5 @@
 """
-健身教练Web应用 - DAML-RAG Framework示例
+健身教练Web应用 - 玉珍健身 框架示例
 """
 
 import asyncio
@@ -13,7 +13,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import uvicorn
 
-# 导入DAML-RAG框架
+# 导入玉珍健身框架
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
@@ -116,7 +116,7 @@ session_manager = SessionManager()
 # FastAPI应用
 app = FastAPI(
     title="健身教练助手",
-    description="基于DAML-RAG Framework的智能健身教练助手",
+    description="基于玉珍健身 框架的智能健身教练助手",
     version="1.0.0"
 )
 
@@ -202,7 +202,7 @@ async def root():
     return {
         "message": "欢迎使用健身教练助手",
         "version": "1.0.0",
-        "framework": "DAML-RAG Framework",
+        "framework": "玉珍健身 框架",
         "endpoints": {
             "chat": "/api/chat",
             "health": "/api/health",

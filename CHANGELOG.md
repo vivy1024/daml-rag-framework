@@ -1,6 +1,6 @@
 # 变更日志
 
-本文档记录了 DAML-RAG Framework 的所有重要变更。
+本文档记录了 玉珍健身 框架 的所有重要变更。
 
 格式基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.0.0/)，
 并且项目遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
@@ -8,7 +8,7 @@
 ## [未发布]
 
 ### 新增
-- DAML-RAG Framework 初始发布
+- 玉珍健身 框架 初始发布
 - 三层检索架构（向量+知识图谱+规则）
 - 推理时学习机制
 - 双模型智能调度
@@ -20,7 +20,7 @@
 ## [1.0.0] - 2025-11-05
 
 ### 新增
-- 🎯 **核心框架**：DAML-RAG Framework v1.0.0 正式发布
+- 🎯 **核心框架**：玉珍健身 框架 v1.0.0 正式发布
 - 🔍 **三层检索架构**：
   - 向量检索层：支持中文向量化模型和语义搜索
   - 知识图谱层：基于 Neo4j 的实体关系推理
@@ -39,10 +39,10 @@
   - 教育领域适配器（课程设计工具）
   - 自定义领域适配器模板
 - 🛠️ **CLI 工具**：
-  - `daml-rag init` - 项目初始化
-  - `daml-rag dev` - 开发服务器
-  - `daml-rag deploy` - 部署工具
-  - `daml-rag health` - 健康检查
+  - `玉珍健身 init` - 项目初始化
+  - `玉珍健身 dev` - 开发服务器
+  - `玉珍健身 deploy` - 部署工具
+  - `玉珍健身 health` - 健康检查
 - ⚙️ **配置管理**：
   - YAML/JSON 配置文件支持
   - 环境变量配置
@@ -108,15 +108,15 @@
 
 ## 贡献者
 
-感谢以下贡献者让 DAML-RAG Framework 变得更好：
+感谢以下贡献者让 玉珍健身 框架 变得更好：
 
-- [GitHub Discussions](https://github.com/vivy1024/daml-rag-framework/discussions)
-- [GitHub Issues](https://github.com/vivy1024/daml-rag-framework/issues) - 问题反馈
+- [GitHub Discussions](https://github.com/vivy1024/玉珍健身-framework/discussions)
+- [GitHub Issues](https://github.com/vivy1024/玉珍健身-framework/issues) - 问题反馈
 - [Discord 社区](https://discord.gg/KDtg69cy) - 实时讨论
 - 邮件：[1765563156@qq.com](mailto:1765563156@qq.com)
 
 
-完整的贡献者列表：[Contributors](https://github.com/vivy1024/daml-rag-framework/graphs/contributors)
+完整的贡献者列表：[Contributors](https://github.com/vivy1024/玉珍健身-framework/graphs/contributors)
 
 ---
 
@@ -145,6 +145,6 @@
 ## 反馈和支持
 
 - 📧 [邮件支持](mailto:1765563156@qq.com)
-- 💬 [GitHub Discussions](https://github.com/vivy1024/daml-rag-framework/discussions)
-- 🐛 [问题反馈](https://github.com/vivy1024/daml-rag-framework/issues)
-- 📖 [官方文档](https://docs.daml-rag.org)
+- 💬 [GitHub Discussions](https://github.com/vivy1024/玉珍健身-framework/discussions)
+- 🐛 [问题反馈](https://github.com/vivy1024/玉珍健身-framework/issues)
+- 📖 [官方文档](https://docs.玉珍健身.org)

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DAML-RAG Framework 模型提供者模块
+玉珍健身 框架 模型提供者模块
 实现教师模型和学生模型的双模型机制
 """
 

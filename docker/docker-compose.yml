@@ -1,4 +1,4 @@
-# DAML-RAG框架 Docker Compose配置
+# 玉珍健身框架 Docker Compose配置
 # 包含三层检索系统和MCP服务器的完整部署
 
 version: '3.8'
@@ -64,7 +64,7 @@ services:
       retries: 3
     restart: unless-stopped
 
-  # DAML-RAG MCP服务器
+  # 玉珍健身 MCP服务器
   damlrag-mcp:
     build:
       context: ..

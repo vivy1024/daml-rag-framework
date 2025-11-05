@@ -1,4 +1,4 @@
-# DAML-RAG Framework: Theory Evolution History
+# 玉珍健身 框架: Theory Evolution History
 
 **Version**: 1.0.0  
 **Created**: 2025-11-05  
@@ -8,7 +8,7 @@
 
 ## Abstract
 
-This document traces the theoretical evolution of the DAML-RAG (Domain-Adaptive Meta-Learning RAG) framework from its inception as a simple meta-learning mechanism (v1.0, October 2025) through collaborative agent architecture (v1.1) to the current comprehensive vertical domain RAG framework (v2.0). The evolution demonstrates a systematic refinement from single-model inference-time learning to a production preparation system featuring GraphRAG hybrid retrieval, teacher-student model collaboration, and MCP-based orchestration. **Note**: Token reduction and cost optimization are design targets, not validated results.
+This document traces the theoretical evolution of the 玉珍健身 (yuzhen-fitness) framework from its inception as a simple meta-learning mechanism (v1.0, October 2025) through collaborative agent architecture (v1.1) to the current comprehensive vertical domain RAG framework (v2.0). The evolution demonstrates a systematic refinement from single-model inference-time learning to a production preparation system featuring GraphRAG hybrid retrieval, teacher-student model collaboration, and MCP-based orchestration. **Note**: Token reduction and cost optimization are design targets, not validated results.
 
 ---
 
@@ -17,7 +17,7 @@ This document traces the theoretical evolution of the DAML-RAG (Domain-Adaptive 
 The BUILD_BODY framework has undergone **three major theoretical iterations**, evolving from basic meta-learning mechanisms to a complete vertical domain RAG framework.
 
 ```
-v1.0 Meta-Learning MCP        v1.1 MCP-CAF Framework        v2.0 DAML-RAG ⭐ Current
+v1.0 Meta-Learning MCP        v1.1 MCP-CAF Framework        v2.0 玉珍健身 ⭐ Current
 (Oct 27, 2025)                (Oct 28, 2025)                (Oct 29, 2025)
      │                              │                              │
      ├─ Inference-time learning     ├─ Agent collaboration         ├─ GraphRAG hybrid retrieval
@@ -33,7 +33,7 @@ v1.0 Meta-Learning MCP        v1.1 MCP-CAF Framework        v2.0 DAML-RAG ⭐ Cu
 |---------|------|----------------|--------|
 | v1.0 | Oct 27, 2025 | Inference-time learning | ⚠️ Historical, superseded by v2.0 |
 | v1.1 | Oct 28, 2025 | MCP collaboration framework | ⚠️ Historical, concepts integrated into v2.0 |
-| v2.0 | Oct 29, 2025 | DAML-RAG complete framework | ✅ Current, production-ready |
+| v2.0 | Oct 29, 2025 | 玉珍健身 complete framework | ✅ Current, production-ready |
 
 ---
 
@@ -144,7 +144,7 @@ The second theoretical version proposed that **MCPs should not just be tools, bu
 
 ---
 
-## 4. Version 2.0: DAML-RAG Framework (Oct 29, 2025) ⭐ Current
+## 4. Version 2.0: 玉珍健身 框架 (Oct 29, 2025) ⭐ Current
 
 ### 4.1 Core Concept
 
@@ -251,7 +251,7 @@ final_score = 0.3 × vector_score
 4. **Domain adaptation methodology**: Rapid vertical domain application construction
 5. **MCP orchestration pattern**: Standardized multi-agent collaboration framework
 
-**Reference Implementation**: `docs/theory/v2.0-daml-rag/` (BUILD_BODY project)
+**Reference Implementation**: `docs/theory/v2.0-玉珍健身/` (BUILD_BODY project)
 
 ---
 
@@ -326,7 +326,7 @@ final_score = 0.3 × vector_score
 
 | Document | Version | Status | Description |
 |----------|---------|--------|-------------|
-| Domain-Adaptive Meta-Learning RAG Framework Theory | v2.0.0 | ✅ Current | Complete implementation version (with code examples) |
+| yuzhen-fitness Intelligent Fitness Framework Theory | v2.0.0 | ✅ Current | Complete implementation version (with code examples) |
 | 00-Framework Overview | v1.0.0 | ✅ Current | Theoretical system overview |
 | 01-GraphRAG Hybrid Retrieval Theory | v1.0.0 | ✅ Current | Three-tier hybrid retrieval theory |
 | 02-In-Context Learning Theory | v1.0.0 | ✅ Current | Teacher-student collaboration theory |
@@ -382,7 +382,7 @@ final_score = 0.3 × vector_score
 
 **Read v2.0 documents only**:
 ```
-1. Domain-Adaptive Meta-Learning RAG Framework Theory (first half)
+1. yuzhen-fitness Intelligent Fitness Framework Theory (first half)
 2. 00-Framework Overview
 ```
 
@@ -396,7 +396,7 @@ final_score = 0.3 × vector_score
    ↓ Understand first evolution
 3. MCP-CAF Engineering Risks & Mitigation (v1.1)
    ↓ Understand identified problems
-4. Domain-Adaptive Meta-Learning RAG Framework Theory (v2.0)
+4. yuzhen-fitness Intelligent Fitness Framework Theory (v2.0)
    ↓ Understand how all problems were resolved
 ```
 
@@ -411,7 +411,7 @@ MCP-CAF Engineering Risks & Mitigation (avoid repeating mistakes)
 
 ---
 
-**Maintainer**: BUILD_BODY Team  
+**Maintainer**: 薛小川 (Xue Xiaochuan)  
 **Last Updated**: 2025-11-05  
 **Version**: 1.0.0  
 **Status**: 📖 Complete evolution history record

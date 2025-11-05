@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DAML-RAG Framework 向量检索基类
+玉珍健身 框架 向量检索基类
 定义向量检索的抽象接口和通用功能
 """
 

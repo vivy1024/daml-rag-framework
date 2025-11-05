@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-DAML-RAG MCP客户端使用示例
-展示如何与DAML-RAG MCP服务器进行交互
+玉珍健身 MCP客户端使用示例
+展示如何与玉珍健身 MCP服务器进行交互
 
 这个示例演示了：
 1. MCP客户端的基本使用方法
@@ -9,7 +9,7 @@ DAML-RAG MCP客户端使用示例
 3. 错误处理和重试机制
 4. 异步批量处理
 
-作者：BUILD_BODY Team
+作者：薛小川 (Xue Xiaochuan)
 版本：v1.0.0
 日期：2025-11-05
 """
@@ -70,7 +70,7 @@ class FeedbackRequest:
 # ============================================================================
 
 class DAMLRAGMCPClient:
-    """DAML-RAG MCP客户端"""
+    """玉珍健身 MCP客户端"""
 
     def __init__(self, config: MCPClientConfig):
         self.config = config
@@ -463,7 +463,7 @@ async def example_error_handling():
 
 async def main():
     """主函数"""
-    print("🚀 DAML-RAG MCP客户端示例")
+    print("🚀 玉珍健身 MCP客户端示例")
     print("基于三层检索系统的智能MCP工具集成演示")
     print("=" * 60)
 
@@ -479,7 +479,7 @@ async def main():
 
         print("\n✅ 所有示例运行完成！")
         print("\n💡 提示:")
-        print("   - 确保DAML-RAG MCP服务器正在运行 (python daml_rag_mcp_server.py)")
+        print("   - 确保玉珍健身 MCP服务器正在运行 (python daml_rag_mcp_server.py)")
         print("   - 确保Qdrant和Neo4j服务已启动")
         print("   - 查看服务器文档: http://localhost:8002/docs")
 
@@ -489,9 +489,9 @@ async def main():
 
 
 if __name__ == "__main__":
-    print("🔧 启动DAML-RAG MCP客户端示例...")
+    print("🔧 启动玉珍健身 MCP客户端示例...")
     print("📋 前置条件:")
-    print("   - DAML-RAG MCP服务器运行在 http://localhost:8002")
+    print("   - 玉珍健身 MCP服务器运行在 http://localhost:8002")
     print("   - Qdrant服务运行在 localhost:6333")
     print("   - Neo4j服务运行在 localhost:7474")
     print()

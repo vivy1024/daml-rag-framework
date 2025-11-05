@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 前端反馈收集系统示例
-基于DAML-RAG框架的用户反馈收集和分析系统
+基于玉珍健身框架的用户反馈收集和分析系统
 
 这个示例展示了：
 1. 前端反馈收集的完整流程
@@ -9,7 +9,7 @@
 3. 用户满意度和回答质量评估
 4. 实时反馈展示和统计
 
-作者：BUILD_BODY Team
+作者：薛小川 (Xue Xiaochuan)
 版本：v1.0.0
 日期：2025-11-05
 """
@@ -403,7 +403,7 @@ feedback_system = FeedbackCollectionSystem()
 # 创建FastAPI应用
 app = FastAPI(
     title="前端反馈收集系统",
-    description="基于DAML-RAG框架的用户反馈收集和分析系统",
+    description="基于玉珍健身框架的用户反馈收集和分析系统",
     version="1.0.0"
 )
 
@@ -427,7 +427,7 @@ FRONTEND_HTML = """
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAML-RAG 反馈收集系统</title>
+    <title>玉珍健身 反馈收集系统</title>
     <style>
         * {
             margin: 0;
@@ -633,7 +633,7 @@ FRONTEND_HTML = """
 <body>
     <div class="container">
         <div class="header">
-            <h1>🚀 DAML-RAG 反馈收集系统</h1>
+            <h1>🚀 玉珍健身 反馈收集系统</h1>
             <p>基于三层检索系统的智能问答反馈收集和分析</p>
         </div>
 

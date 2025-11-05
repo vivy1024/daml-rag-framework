@@ -1,4 +1,4 @@
-# DAML-RAG Framework
+# Yuzhen Fitness Framework
 
 **Domain-Adaptive Meta-Learning RAG** - Production-Ready Framework for Vertical Domain AI Applications
 
@@ -15,7 +15,7 @@ English | **[简体中文](README.md)**
 
 ## 📖 Overview
 
-DAML-RAG is a production-ready framework that integrates proven techniques—GraphRAG hybrid retrieval, In-Context Learning, Teacher-Student collaboration, and MCP-based multi-agent orchestration—for building vertical domain AI applications with token savings and cost optimization.
+Yuzhen Fitness is a production-ready framework that integrates proven techniques—GraphRAG hybrid retrieval, In-Context Learning, Teacher-Student collaboration, and MCP-based multi-agent orchestration—for building vertical domain AI applications with token savings and cost optimization.
 
 **NOT a new theory, but an engineering best practice framework for practitioners.**
 
@@ -23,14 +23,14 @@ DAML-RAG is a production-ready framework that integrates proven techniques—Gra
 
 ## 🔬 Academic Positioning
 
-### What DAML-RAG IS ✅
+### What 玉珍健身 IS ✅
 
 - **Engineering Framework**: Systematic integration of RAG [1], GraphRAG [2], ICL [3], Knowledge Graphs [4]
 - **Production System**: Validated in BUILD_BODY fitness domain
 - **Cost Optimization**: Teacher-student collaboration reducing costs
 - **Vertical Domain Focus**: Specialized for knowledge-intensive domains
 
-### What DAML-RAG is NOT ❌
+### What 玉珍健身 is NOT ❌
 
 - ❌ **NOT a new ML/AI theory**: No novel algorithms or learning paradigms
 - ❌ **NOT claiming universal superiority**: Designed for specific use cases
@@ -52,7 +52,7 @@ DAML-RAG is a production-ready framework that integrates proven techniques—Gra
 
 ## 🏗️ Core Architecture: Three-Tier Retrieval System
 
-DAML-RAG's core innovation is the three-tier hybrid retrieval architecture, perfectly combining vector retrieval, knowledge graphs, and business rules:
+玉珍健身's core innovation is the three-tier hybrid retrieval architecture, perfectly combining vector retrieval, knowledge graphs, and business rules:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -132,7 +132,7 @@ DAML-RAG's core innovation is the three-tier hybrid retrieval architecture, perf
 
 ### 🔧 Technology Stack Selection
 
-DAML-RAG supports flexible technology stack selection, developers can choose based on preferences and needs:
+玉珍健身 supports flexible technology stack selection, developers can choose based on preferences and needs:
 
 ```yaml
 # Vector Database Options
@@ -169,21 +169,21 @@ Small Models:
 ## 📦 Module Structure
 
 ```
-daml-rag-framework/
-├── daml-rag-core/              # 🔧 Core Framework
+玉珍健身-framework/
+├── 玉珍健身-core/              # 🔧 Core Framework
 │   ├── interfaces/             # Abstract interface definitions
 │   ├── models/                 # Data models
 │   ├── config/                 # Configuration management
 │   └── utils/                  # Utility functions
-├── daml-rag-retrieval/         # 🔍 Three-tier Retrieval Engine
+├── 玉珍健身-retrieval/         # 🔍 Three-tier Retrieval Engine
 │   ├── vector/                 # Vector retrieval layer
 │   ├── knowledge/              # Knowledge graph layer
 │   ├── rules/                  # Rule filtering layer
 │   └── cache/                  # Cache management
-├── daml-rag-orchestration/     # 🎯 Task Orchestration Engine
-├── daml-rag-learning/          # 🧠 Inference-time Learning
-├── daml-rag-adapters/          # 🔌 Domain Adapters
-├── daml-rag-cli/               # 🚀 Command Line Tools
+├── 玉珍健身-orchestration/     # 🎯 Task Orchestration Engine
+├── 玉珍健身-learning/          # 🧠 Inference-time Learning
+├── 玉珍健身-adapters/          # 🔌 Domain Adapters
+├── 玉珍健身-cli/               # 🚀 Command Line Tools
 └── examples/                   # 📚 Example Projects
 ```
 
@@ -194,20 +194,20 @@ daml-rag-framework/
 ### Installation
 
 ```bash
-pip install daml-rag-framework
+pip install 玉珍健身-framework
 ```
 
 ### Create New Project
 
 ```bash
 # Create fitness domain AI application
-daml-rag init my-fitness-app --domain fitness
+玉珍健身 init my-fitness-app --domain fitness
 
 # Create healthcare domain AI application
-daml-rag init my-medical-app --domain healthcare
+玉珍健身 init my-medical-app --domain healthcare
 
 # Create custom domain AI application
-daml-rag init my-custom-app --template custom
+玉珍健身 init my-custom-app --template custom
 ```
 
 ### Basic Usage
@@ -372,15 +372,15 @@ The following are **theoretical design goals**, not validated metrics:
 
 ## 📖 Citation
 
-If you use DAML-RAG in your research or project, please cite:
+If you use 玉珍健身 in your research or project, please cite:
 
 ```bibtex
-@software{daml_rag_2024,
-  title={DAML-RAG: Domain-Adaptive Meta-Learning RAG Framework},
+@software{yuzhen_fitness_2025,
+  title={玉珍健身: yuzhen-fitness Intelligent Fitness Framework},
   author={薛小川 (Xue Xiaochuan)},
   year={2025},
   version={1.0.0},
-  url={https://github.com/vivy1024/daml-rag-framework}
+  url={https://github.com/vivy1024/玉珍健身-framework}
 }
 ```
 

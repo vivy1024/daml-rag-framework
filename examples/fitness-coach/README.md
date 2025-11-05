@@ -1,6 +1,6 @@
 # 健身教练助手示例
 
-基于DAML-RAG框架的智能健身教练助手，展示了如何使用框架构建垂直领域AI应用。
+基于玉珍健身框架的智能健身教练助手，展示了如何使用框架构建垂直领域AI应用。
 
 ## 🎯 项目特性
 
@@ -13,7 +13,7 @@
 ## 🏗️ 技术架构
 
 ```
-前端 (FastAPI + HTML)      ←→  DAML-RAG Framework  ←→  MCP服务器池
+前端 (FastAPI + HTML)      ←→  玉珍健身 框架  ←→  MCP服务器池
      ↓                           ↓                         ↓
   Web界面                    三层检索引擎              健身专业工具
   用户交互                    向量+图谱+规则            23个MCP工具
@@ -26,7 +26,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/daml-rag/fitness-coach-example.git
+git clone https://github.com/玉珍健身/fitness-coach-example.git
 cd fitness-coach-example
 
 # 创建虚拟环境
@@ -82,11 +82,11 @@ domain_config:
 ### 3. 启动服务
 
 ```bash
-# 启动DAML-RAG框架
+# 启动玉珍健身框架
 python app.py
 
 # 或使用CLI工具
-daml-rag dev
+玉珍健身 dev
 ```
 
 访问 http://localhost:8000 开始使用。
@@ -220,10 +220,10 @@ class CustomRetriever(IVectorRetriever):
 
 ## 📚 学习资源
 
-- [DAML-RAG框架文档](https://docs.daml-rag.org)
-- [健身领域适配器指南](https://docs.daml-rag.org/adapters/fitness)
+- [玉珍健身框架文档](https://docs.玉珍健身.org)
+- [健身领域适配器指南](https://docs.玉珍健身.org/adapters/fitness)
 - [MCP协议规范](https://modelcontextprotocol.org)
-- [API参考文档](https://docs.daml-rag.org/api)
+- [API参考文档](https://docs.玉珍健身.org/api)
 
 ## 🤝 贡献
 

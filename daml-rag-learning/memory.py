@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DAML-RAG Framework 记忆管理器模块
+玉珍健身 框架 记忆管理器模块
 实现经验存储、检索和反馈学习机制
 """
 

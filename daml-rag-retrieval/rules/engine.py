@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DAML-RAG Framework 规则过滤引擎
+玉珍健身 框架 规则过滤引擎
 实现业务规则验证和个性化约束
 """
 

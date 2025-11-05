@@ -1,5 +1,5 @@
-# DAML-RAG Framework 核心依赖
-daml-rag-framework
+# 玉珍健身 框架 核心依赖
+玉珍健身-framework
 
 # Web框架
 fastapi==0.104.1

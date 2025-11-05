@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DAML-RAG Framework Neo4j知识图谱实现
+玉珍健身 框架 Neo4j知识图谱实现
 专业图数据库支持，用于结构化关系推理
 """
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DAML-RAG Framework FAISS向量检索实现
+玉珍健身 框架 FAISS向量检索实现
 Facebook AI相似度搜索本地部署
 """
 

@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-DAML-RAG框架 MCP服务器示例
+玉珍健身框架 MCP服务器示例
 基于三层检索系统的通用MCP工具集成
 
 这个示例展示了如何创建一个精良的MCP服务器，
-集成DAML-RAG框架的三层检索系统，为各种应用提供智能检索能力。
+集成玉珍健身框架的三层检索系统，为各种应用提供智能检索能力。
 
-作者：BUILD_BODY Team
+作者：薛小川 (Xue Xiaochuan)
 版本：v1.0.0
 日期：2025-11-05
 """
@@ -23,7 +23,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 import uvicorn
 
-# 导入DAML-RAG框架核心组件
+# 导入玉珍健身框架核心组件
 from daml_rag.core import DAMLRAGFramework
 from daml_rag.config import DAMLRAGConfig
 from daml_rag_retrieval.vector.qdrant import QdrantConfig
@@ -83,12 +83,12 @@ class FeedbackRequest(BaseModel):
 
 
 # ============================================================================
-# DAML-RAG MCP服务器核心类
+# 玉珍健身 MCP服务器核心类
 # ============================================================================
 
 class DAMLRAGMCPServer:
     """
-    DAML-RAG框架MCP服务器
+    玉珍健身框架MCP服务器
 
     集成三层检索系统，提供智能检索和问答能力：
     1. 向量检索层 (Qdrant/FAISS)
@@ -104,17 +104,17 @@ class DAMLRAGMCPServer:
 
     async def initialize(self) -> None:
         """初始化MCP服务器"""
-        logger.info("🚀 正在初始化DAML-RAG MCP服务器...")
+        logger.info("🚀 正在初始化玉珍健身 MCP服务器...")
 
         try:
-            # 初始化DAML-RAG框架
+            # 初始化玉珍健身框架
             self.framework = DAMLRAGFramework(self.config)
             await self.framework.initialize()
 
             # 注册MCP工具
             await self._register_tools()
 
-            logger.info("✅ DAML-RAG MCP服务器初始化完成")
+            logger.info("✅ 玉珍健身 MCP服务器初始化完成")
 
         except Exception as e:
             logger.error(f"❌ MCP服务器初始化失败: {str(e)}")
@@ -202,7 +202,7 @@ class DAMLRAGMCPServer:
             raise HTTPException(status_code=400, detail="查询不能为空")
 
         try:
-            # 使用DAML-RAG框架处理查询
+            # 使用玉珍健身框架处理查询
             result = await self.framework.process_query(
                 query=query,
                 context={
@@ -525,7 +525,7 @@ class DAMLRAGMCPServer:
         """关闭MCP服务器"""
         if self.framework:
             await self.framework.shutdown()
-        logger.info("DAML-RAG MCP服务器已关闭")
+        logger.info("玉珍健身 MCP服务器已关闭")
 
 
 # ============================================================================
@@ -555,7 +555,7 @@ async def lifespan(app: FastAPI):
 
 # 创建FastAPI应用
 app = FastAPI(
-    title="DAML-RAG MCP Server",
+    title="玉珍健身 MCP Server",
     description="基于三层检索系统的智能MCP服务器",
     version="1.0.0",
     lifespan=lifespan
@@ -579,7 +579,7 @@ app.add_middleware(
 async def root():
     """根路径"""
     return {
-        "message": "DAML-RAG MCP Server",
+        "message": "玉珍健身 MCP Server",
         "description": "基于三层检索系统的智能MCP服务器",
         "version": "1.0.0",
         "status": "running"
@@ -744,7 +744,7 @@ async def main():
 
 
 if __name__ == "__main__":
-    print("🚀 启动DAML-RAG MCP服务器...")
+    print("🚀 启动玉珍健身 MCP服务器...")
     print("📋 前置条件:")
     print("   - Qdrant服务运行在 localhost:6333")
     print("   - Neo4j服务运行在 localhost:7474")

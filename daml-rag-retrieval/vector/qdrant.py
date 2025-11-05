@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DAML-RAG Framework Qdrant向量检索实现
+玉珍健身 框架 Qdrant向量检索实现
 高性能向量数据库检索层
 """
 

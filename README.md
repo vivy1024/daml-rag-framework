@@ -1,4 +1,4 @@
-# DAML-RAG 框架
+# 玉珍健身 框架
 
 **领域自适应元学习RAG** - 面向垂直领域AI应用的生产就绪框架
 
@@ -15,7 +15,7 @@
 
 ## 📖 项目简介
 
-DAML-RAG是一个生产就绪框架，整合了经过验证的技术——GraphRAG混合检索、上下文学习、教师-学生协同和基于MCP的多智能体编排——用于构建垂直领域AI应用，实现Token节省和成本优化。
+玉珍健身是一个生产就绪框架，整合了经过验证的技术——GraphRAG混合检索、上下文学习、教师-学生协同和基于MCP的多智能体编排——用于构建垂直领域AI应用，实现Token节省和成本优化。
 
 **不是新理论，而是面向实践者的工程最佳实践框架。**
 
@@ -23,14 +23,14 @@ DAML-RAG是一个生产就绪框架，整合了经过验证的技术——GraphR
 
 ## 🔬 学术定位
 
-### DAML-RAG 是什么 ✅
+### 玉珍健身 是什么 ✅
 
 - **工程框架**：系统整合RAG [1]、GraphRAG [2]、ICL [3]、知识图谱 [4]
 - **生产系统**：在BUILD_BODY健身领域经过验证
 - **成本优化**：通过教师-学生协同降低成本
 - **垂直领域聚焦**：专为知识密集型领域设计
 
-### DAML-RAG 不是什么 ❌
+### 玉珍健身 不是什么 ❌
 
 - ❌ **不是新的ML/AI理论**：没有创新算法或学习范式
 - ❌ **不声称通用优越性**：为特定用例设计
@@ -52,7 +52,7 @@ DAML-RAG是一个生产就绪框架，整合了经过验证的技术——GraphR
 
 ## 🏗️ 核心架构：三层检索系统
 
-DAML-RAG的核心创新在于三层混合检索架构，完美结合向量检索、知识图谱和业务规则：
+玉珍健身的核心创新在于三层混合检索架构，完美结合向量检索、知识图谱和业务规则：
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -129,7 +129,7 @@ DAML-RAG的核心创新在于三层混合检索架构，完美结合向量检索
 
 ### 🔧 技术栈选型
 
-DAML-RAG支持灵活的技术栈选型，开发者可以根据偏好和需求选择：
+玉珍健身支持灵活的技术栈选型，开发者可以根据偏好和需求选择：
 
 ```yaml
 # 向量数据库选择
@@ -166,21 +166,21 @@ DAML-RAG支持灵活的技术栈选型，开发者可以根据偏好和需求选
 ## 📦 模块结构
 
 ```
-daml-rag-framework/
-├── daml-rag-core/              # 🔧 核心框架
+玉珍健身-framework/
+├── 玉珍健身-core/              # 🔧 核心框架
 │   ├── interfaces/             # 抽象接口定义
 │   ├── models/                 # 数据模型
 │   ├── config/                 # 配置管理
 │   └── utils/                  # 工具函数
-├── daml-rag-retrieval/         # 🔍 三层检索引擎
+├── 玉珍健身-retrieval/         # 🔍 三层检索引擎
 │   ├── vector/                 # 向量检索层
 │   ├── knowledge/              # 知识图谱层
 │   ├── rules/                  # 规则过滤层
 │   └── cache/                  # 缓存管理
-├── daml-rag-orchestration/     # 🎯 任务编排引擎
-├── daml-rag-learning/          # 🧠 推理时学习
-├── daml-rag-adapters/          # 🔌 领域适配器
-├── daml-rag-cli/               # 🚀 命令行工具
+├── 玉珍健身-orchestration/     # 🎯 任务编排引擎
+├── 玉珍健身-learning/          # 🧠 推理时学习
+├── 玉珍健身-adapters/          # 🔌 领域适配器
+├── 玉珍健身-cli/               # 🚀 命令行工具
 └── examples/                   # 📚 示例项目
 ```
 
@@ -191,20 +191,20 @@ daml-rag-framework/
 ### 安装
 
 ```bash
-pip install daml-rag-framework
+pip install 玉珍健身-framework
 ```
 
 ### 创建新项目
 
 ```bash
 # 创建健身领域AI应用
-daml-rag init my-fitness-app --domain fitness
+玉珍健身 init my-fitness-app --domain fitness
 
 # 创建医疗领域AI应用
-daml-rag init my-medical-app --domain healthcare
+玉珍健身 init my-medical-app --domain healthcare
 
 # 创建自定义领域AI应用
-daml-rag init my-custom-app --template custom
+玉珍健身 init my-custom-app --template custom
 ```
 
 ### 基本使用
@@ -369,15 +369,15 @@ domain_config:
 
 ## 📖 学术引用
 
-如果您在研究或项目中使用DAML-RAG，请引用：
+如果您在研究或项目中使用玉珍健身，请引用：
 
 ```bibtex
-@software{daml_rag_2024,
-  title={DAML-RAG: Domain-Adaptive Meta-Learning RAG Framework},
+@software{yuzhen_fitness_2025,
+  title={玉珍健身: yuzhen-fitness Intelligent Fitness Framework},
   author={薛小川 (Xue Xiaochuan)},
   year={2025},
   version={1.0.0},
-  url={https://github.com/vivy1024/daml-rag-framework}
+  url={https://github.com/vivy1024/玉珍健身-framework}
 }
 ```
 

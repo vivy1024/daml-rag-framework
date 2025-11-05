@@ -16,10 +16,10 @@ class InitCommand(BaseCommand):
     """初始化新项目命令"""
 
     def get_help(self) -> str:
-        return "初始化新的DAML-RAG项目"
+        return "初始化新的玉珍健身项目"
 
     def get_description(self) -> str:
-        return "创建一个新的DAML-RAG应用项目，支持多种领域模板"
+        return "创建一个新的玉珍健身应用项目，支持多种领域模板"
 
     def add_arguments(self, parser: argparse.ArgumentParser):
         parser.add_argument(
@@ -76,7 +76,7 @@ class InitCommand(BaseCommand):
                 return 1
 
         try:
-            print(f"🚀 创建DAML-RAG项目: {project_name}")
+            print(f"🚀 创建玉珍健身项目: {project_name}")
             print(f"📦 领域类型: {domain}")
 
             # 获取模板
@@ -141,7 +141,7 @@ class InitCommand(BaseCommand):
             else:
                 print("2. pip install -r requirements.txt")
 
-        print("3. daml-rag dev")
+        print("3. 玉珍健身 dev")
         print("4. 打开浏览器访问 http://localhost:8000")
 
         print(f"\n📚 领域特定帮助:")
@@ -159,5 +159,5 @@ class InitCommand(BaseCommand):
             print("- 示例查询: '设计Python入门课程'")
 
         print(f"\n🔗 更多信息:")
-        print(f"- 项目文档: https://docs.daml-rag.org")
-        print(f"- GitHub: https://github.com/vivy1024/daml-rag-framework")
+        print(f"- 项目文档: https://docs.玉珍健身.org")
+        print(f"- GitHub: https://github.com/vivy1024/玉珍健身-framework")

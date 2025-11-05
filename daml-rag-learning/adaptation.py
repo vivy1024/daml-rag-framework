@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DAML-RAG Framework 自适应机制模块
+玉珍健身 框架 自适应机制模块
 实现基于经验和反馈的动态调整机制
 """
 

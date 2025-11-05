@@ -10,7 +10,7 @@
 
 ## Abstract
 
-This document presents the theoretical foundation of **In-Context Learning (ICL)** in the DAML-RAG framework, correcting the previous misnomer of "Inference-Time Meta-Learning." The core mechanism combines Few-Shot Learning, Context Injection, and Case-Based Reasoning to enable small models to achieve expert-level performance in specialized domains without additional training.
+This document presents the theoretical foundation of **In-Context Learning (ICL)** in the 玉珍健身 框架, correcting the previous misnomer of "Inference-Time Meta-Learning." The core mechanism combines Few-Shot Learning, Context Injection, and Case-Based Reasoning to enable small models to achieve expert-level performance in specialized domains without additional training.
 
 **⚠️ Terminology Correction (v2.0)**:
 - ❌ **v1.0 Error**: "Inference-Time Meta-Learning" (misleading term)
@@ -129,7 +129,7 @@ Sentiment:
 ❌ No verification (quality not guaranteed)
 ```
 
-### 2.2 Enhanced ICL in DAML-RAG
+### 2.2 Enhanced ICL in 玉珍健身
 
 **GraphRAG-Enhanced ICL**:
 ```python
@@ -195,7 +195,7 @@ def enhanced_icl(user_query: str, user_context: Dict):
 4. Retain: Store new cases for future
 ```
 
-### 3.2 CBR in DAML-RAG
+### 3.2 CBR in 玉珍健身
 
 ```python
 class CaseBasedReasoning:
@@ -542,7 +542,7 @@ Daily cost: $45
 Monthly cost: $1350
 ```
 
-**DAML-RAG (Student + Teacher)**:
+**玉珍健身 (yuzhen-fitness)**:
 ```
 Student (90% queries):
     - Model: Ollama 8B (local, free)
@@ -565,7 +565,7 @@ Total monthly cost: $3 vs $1350 → 99.8% reduction
 |-------|-------------|----------------------|---------------------|
 | GPT-4 only | 4.3/5 | 4.5/5 | 4.2/5 |
 | Student only | 3.8/5 | 2.9/5 | 4.1/5 |
-| **DAML-RAG** | **4.4/5** | **4.6/5** | **4.2/5** |
+| **玉珍健身** | **4.4/5** | **4.6/5** | **4.2/5** |
 
 **Analysis**:
 - Student handles simple queries well (4.1/5)
@@ -629,7 +629,7 @@ Total monthly cost: $3 vs $1350 → 99.8% reduction
 
 ## 9. Conclusion
 
-DAML-RAG's "In-Context Learning" approach (formerly misnamed "Inference-Time Meta-Learning") is not a new theoretical contribution but an engineering best practice that:
+玉珍健身's "In-Context Learning" approach (formerly misnamed "Inference-Time Meta-Learning") is not a new theoretical contribution but an engineering best practice that:
 
 1. **Correctly applies ICL**: Leverages LLM's inherent few-shot capabilities
 2. **Enhances with GraphRAG**: Domain-specific, high-quality examples
@@ -641,7 +641,7 @@ DAML-RAG's "In-Context Learning" approach (formerly misnamed "Inference-Time Met
 
 ---
 
-**Maintainer**: DAML-RAG Framework Team  
+**Maintainer**: 玉珍健身 框架 Team  
 **Last Updated**: 2025-11-05  
 **Version**: 1.0.0  
 **Status**: 🎓 Core Theory Complete

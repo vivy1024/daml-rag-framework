@@ -475,7 +475,7 @@ class RuleEngine:
 
 ---
 
-**维护者**: DAML-RAG Framework Team  
+**维护者**: 玉珍健身 框架 Team  
 **最后更新**: 2025-11-05  
 **状态**: 🎓 核心理论完整
 

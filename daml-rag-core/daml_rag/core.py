@@ -1,5 +1,5 @@
 """
-DAML-RAG框架核心实现
+玉珍健身框架核心实现
 """
 
 import asyncio
@@ -38,7 +38,7 @@ from ..daml_rag_retrieval.rules.engine import RuleEngine, RuleContext
 
 
 class DAMLRAGFramework:
-    """DAML-RAG框架主类"""
+    """玉珍健身框架主类"""
 
     def __init__(self, config: DAMLRAGConfig):
         self.config = config
@@ -81,7 +81,7 @@ class DAMLRAGFramework:
             return
 
         try:
-            self.logger.info("开始初始化DAML-RAG框架...")
+            self.logger.info("开始初始化玉珍健身框架...")
 
             # 验证配置
             config_errors = self.config.validate()
@@ -95,7 +95,7 @@ class DAMLRAGFramework:
             await self._start_background_tasks()
 
             self._initialized = True
-            self.logger.info("DAML-RAG框架初始化完成")
+            self.logger.info("玉珍健身框架初始化完成")
 
         except Exception as e:
             self.logger.error(f"框架初始化失败: {str(e)}")
@@ -106,7 +106,7 @@ class DAMLRAGFramework:
         if self._shutdown:
             return
 
-        self.logger.info("开始关闭DAML-RAG框架...")
+        self.logger.info("开始关闭玉珍健身框架...")
         self._shutdown = True
 
         # 等待活跃查询完成
@@ -124,7 +124,7 @@ class DAMLRAGFramework:
         await self._cleanup_components()
 
         self._initialized = False
-        self.logger.info("DAML-RAG框架已关闭")
+        self.logger.info("玉珍健身框架已关闭")
 
     async def process_query(self, query: str,
                           context: Optional[Dict[str, Any]] = None,

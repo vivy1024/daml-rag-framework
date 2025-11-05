@@ -475,7 +475,7 @@ Continue reading:
 
 ---
 
-**Maintainer**: DAML-RAG Framework Team  
+**Maintainer**: 玉珍健身 框架 Team  
 **Last Updated**: 2025-11-05  
 **Status**: 🎓 Core Theory Complete
 

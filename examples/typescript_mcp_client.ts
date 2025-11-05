@@ -1,6 +1,6 @@
 /**
- * DAML-RAG MCP TypeScript客户端示例
- * 展示前端应用如何与DAML-RAG MCP服务器集成
+ * 玉珍健身 MCP TypeScript客户端示例
+ * 展示前端应用如何与玉珍健身 MCP服务器集成
 
 这个示例演示了：
 1. TypeScript类型的MCP客户端
@@ -9,7 +9,7 @@
 4. 实时查询和反馈收集
 5. 前端状态管理
 
-作者：BUILD_BODY Team
+作者：薛小川 (Xue Xiaochuan)
 版本：v1.0.0
 日期：2025-11-05
  */
@@ -728,7 +728,7 @@ export {
 // 如果是直接运行此文件，执行示例
 if (typeof window !== 'undefined') {
   // 浏览器环境
-  console.log('DAML-RAG MCP TypeScript客户端已加载');
+  console.log('玉珍健身 MCP TypeScript客户端已加载');
 
   // 可以在这里初始化全局客户端实例
   window.damlragMCPClient = new DAMLRAGMCPClient({
@@ -738,7 +738,7 @@ if (typeof window !== 'undefined') {
   });
 } else if (typeof module !== 'undefined' && module.exports) {
   // Node.js环境
-  console.log('DAML-RAG MCP TypeScript客户端 (Node.js版本)');
+  console.log('玉珍健身 MCP TypeScript客户端 (Node.js版本)');
 
   // 运行基础示例
   basicUsageExample().catch(console.error);

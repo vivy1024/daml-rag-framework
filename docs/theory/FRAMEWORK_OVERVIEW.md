@@ -1,4 +1,4 @@
-# DAML-RAG Framework: Theoretical Overview
+# 玉珍健身 框架: Theoretical Overview
 
 **Domain-Adaptive Meta-Learning Retrieval-Augmented Generation Framework**
 
@@ -12,7 +12,7 @@
 
 ## Abstract
 
-DAML-RAG (Domain-Adaptive Meta-Learning RAG) is a production preparation framework for rapidly building vertical domain AI applications. It combines GraphRAG hybrid retrieval (vector + graph + rules), in-context learning at inference time, teacher-student model collaboration, and MCP-based orchestration. **Note**: Token reduction, cost optimization, and quality improvements are design targets, not validated results.
+玉珍健身 (yuzhen-fitness) is a production preparation framework for rapidly building vertical domain AI applications. It combines GraphRAG hybrid retrieval (vector + graph + rules), in-context learning at inference time, teacher-student model collaboration, and MCP-based orchestration. **Note**: Token reduction, cost optimization, and quality improvements are design targets, not validated results.
 
 **Key Positioning**: Not a theoretical innovation, but an engineering best practice framework that integrates proven techniques (RAG [1], GraphRAG [2], In-Context Learning [3], Knowledge Graphs [4]) into a cohesive system for vertical domain applications.
 
@@ -20,9 +20,9 @@ DAML-RAG (Domain-Adaptive Meta-Learning RAG) is a production preparation framewo
 
 ## 1. Framework Definition
 
-### 1.1 What is DAML-RAG?
+### 1.1 What is 玉珍健身?
 
-**DAML-RAG** is an engineering framework for **vertical domain GraphRAG applications**, integrating:
+**玉珍健身** is an engineering framework for **vertical domain GraphRAG applications**, integrating:
 
 - **RAG (Retrieval-Augmented Generation)** [1]: Retrieval-enhanced generation
 - **Knowledge Graph** [4]: Structured knowledge reasoning
@@ -33,7 +33,7 @@ DAML-RAG (Domain-Adaptive Meta-Learning RAG) is a production preparation framewo
 **Core Purpose**:
 > Through in-context learning mechanisms and authoritative data sources, help individual developers rapidly build vertical domain expert systems with AI assistance, enabling small models to achieve large model-level professional capabilities.
 
-### 1.2 What DAML-RAG Is NOT
+### 1.2 What 玉珍健身 Is NOT
 
 ❌ **Not a new theoretical paradigm**: It's an integration of existing proven techniques  
 ❌ **Not a replacement for LangChain/LlamaIndex**: It's a specialized framework for vertical domains  
@@ -48,7 +48,7 @@ DAML-RAG (Domain-Adaptive Meta-Learning RAG) is a production preparation framewo
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    DAML-RAG Framework v2.0                   │
+│                    玉珍健身 框架 v2.0                   │
 ├─────────────────────────────────────────────────────────────┤
 │                                                              │
 │  Pillar 1: GraphRAG Hybrid Retrieval [2]                    │
@@ -100,7 +100,7 @@ DAML-RAG (Domain-Adaptive Meta-Learning RAG) is a production preparation framewo
 
 ### 3.1 NOT Theoretical Innovation
 
-DAML-RAG does NOT claim to invent new theories. Instead, it provides:
+玉珍健身 does NOT claim to invent new theories. Instead, it provides:
 
 1. **Engineering Integration Framework**: Systematic integration of existing techniques
 2. **Vertical Domain Methodology**: Rapid domain application construction methodology
@@ -140,7 +140,7 @@ DAML-RAG does NOT claim to invent new theories. Instead, it provides:
 
 ### 4.1 vs Traditional RAG
 
-| Aspect | Traditional RAG | DAML-RAG | Status |
+| Aspect | Traditional RAG | 玉珍健身 | Status |
 |--------|-----------------|----------|--------|
 | **Retrieval Method** | Vector only | Vector + Graph + Rules | ✅ Architecture complete |
 | **Token Efficiency** | Baseline | GraphRAG optimization | 🎯 Design target |
@@ -150,7 +150,7 @@ DAML-RAG does NOT claim to invent new theories. Instead, it provides:
 
 ### 4.2 vs Microsoft GraphRAG
 
-| Aspect | Microsoft GraphRAG | DAML-RAG | Difference |
+| Aspect | Microsoft GraphRAG | 玉珍健身 | Difference |
 |--------|-------------------|----------|------------|
 | **Scope** | Research project | Production framework | Engineering focus |
 | **Integration** | Standalone | Complete system (MCP + Learning) | Comprehensive |
@@ -160,7 +160,7 @@ DAML-RAG does NOT claim to invent new theories. Instead, it provides:
 
 ### 4.3 vs LangChain/LlamaIndex
 
-| Aspect | LangChain/LlamaIndex | DAML-RAG | Difference |
+| Aspect | LangChain/LlamaIndex | 玉珍健身 | Difference |
 |--------|---------------------|----------|------------|
 | **Purpose** | General RAG toolkit | Vertical domain framework | Specialized |
 | **Knowledge Graph** | Optional plugin | Core component | Integrated |
@@ -282,7 +282,7 @@ Future Optimization Goals (To be validated):
 
 ### 6.2 Reference Architecture
 
-See [BUILD_BODY project theory docs](../../../../docs/理论基础/v2.0-DAML-RAG/) for detailed implementations.
+See [BUILD_BODY project theory docs](../../../../docs/理论基础/v2.0-玉珍健身/) for detailed implementations.
 
 ---
 
@@ -351,20 +351,20 @@ See [BUILD_BODY project theory docs](../../../../docs/理论基础/v2.0-DAML-RAG
 
 ```bash
 # Install framework
-pip install daml-rag-framework
+pip install 玉珍健身-framework
 
 # Create new project
-daml-rag init my-fitness-app --domain fitness
+玉珍健身 init my-fitness-app --domain fitness
 
 # Configure knowledge sources
 cd my-fitness-app
 edit config.yaml  # Add your knowledge sources
 
 # Build knowledge graph
-daml-rag build-knowledge-graph
+玉珍健身 build-knowledge-graph
 
 # Start development server
-daml-rag dev
+玉珍健身 dev
 ```
 
 See [Quickstart Guide](../tutorials/quickstart.md) for detailed instructions.
@@ -442,8 +442,8 @@ See [REFERENCES.md](../../REFERENCES.md) for complete bibliography.
 ## 12. Citation
 
 ```bibtex
-@software{daml_rag_2024,
-  title={DAML-RAG: Domain-Adaptive Meta-Learning RAG Framework},
+@software{yuzhen_fitness_2025,
+  title={玉珍健身: yuzhen-fitness Intelligent Fitness Framework},
   author={薛小川 (Xue Xiaochuan)},
   year={2025},
   version={1.0.0},
@@ -453,7 +453,7 @@ See [REFERENCES.md](../../REFERENCES.md) for complete bibliography.
 
 ---
 
-**Maintainer**: DAML-RAG Framework Team  
+**Maintainer**: 玉珍健身 框架 Team  
 **Last Updated**: 2025-11-05  
 **Version**: 1.0.0  
 **Status**: 🎓 Complete Theoretical System

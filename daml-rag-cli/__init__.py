@@ -1,5 +1,5 @@
 """
-DAML-RAG 命令行工具
+玉珍健身 命令行工具
 """
 
 from .cli import main

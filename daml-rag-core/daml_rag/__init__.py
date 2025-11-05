@@ -1,7 +1,7 @@
 """
-DAML-RAG Framework - Domain-Adaptive Meta-Learning RAG
+玉珍健身 框架 - Domain-Adaptive Meta-Learning RAG
 
-面向垂直领域的自适应多源学习型RAG框架
+玉珍健身智能健身框架
 """
 
 __version__ = "1.0.0"

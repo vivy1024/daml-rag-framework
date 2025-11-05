@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DAML-RAG Framework 反馈处理模块
+玉珍健身 框架 反馈处理模块
 实现用户反馈收集、分析和学习机制
 """
 

@@ -1,8 +1,8 @@
-# DAML-RAG Framework 快速开始指南
+# 玉珍健身 框架 快速开始指南
 
 **5分钟构建你的垂直领域AI应用**
 
-## 🎯 为什么选择 DAML-RAG？
+## 🎯 为什么选择 玉珍健身？
 
 - **10倍开发效率**：垂直领域AI应用开发从月缩短到周
 - **85%成本节省**：智能检索和模型调度优化
@@ -15,36 +15,36 @@
 
 ```bash
 # 使用 pip 安装
-pip install daml-rag-framework
+pip install 玉珍健身-framework
 
 # 或使用 poetry
-poetry add daml-rag-framework
+poetry add 玉珍健身-framework
 
 # 或使用 uv
-uv add daml-rag-framework
+uv add 玉珍健身-framework
 ```
 
 ### 2. 创建新项目
 
 ```bash
 # 创建健身领域AI应用
-daml-rag init my-fitness-app --domain fitness
+玉珍健身 init my-fitness-app --domain fitness
 
 # 创建医疗领域AI应用
-daml-rag init my-medical-app --domain healthcare
+玉珍健身 init my-medical-app --domain healthcare
 
 # 创建教育领域AI应用
-daml-rag init my-education-app --domain education
+玉珍健身 init my-education-app --domain education
 
 # 创建自定义领域应用
-daml-rag init my-custom-app --template custom
+玉珍健身 init my-custom-app --template custom
 ```
 
 ### 3. 启动开发服务器
 
 ```bash
 cd my-fitness-app
-daml-rag dev
+玉珍健身 dev
 ```
 
 访问 http://localhost:8000 开始使用！
@@ -285,41 +285,41 @@ async def use_custom_adapter():
 
 ```bash
 # 查看帮助
-daml-rag --help
+玉珍健身 --help
 
 # 初始化项目
-daml-rag init my-project --domain fitness
+玉珍健身 init my-project --domain fitness
 
 # 创建工具脚手架
-daml-rag scaffold my-tool --category exercise
+玉珍健身 scaffold my-tool --category exercise
 
 # 部署项目
-daml-rag deploy --platform docker
+玉珍健身 deploy --platform docker
 
 # 健康检查
-daml-rag health
+玉珍健身 health
 
 # 查看配置
-daml-rag config show
+玉珍健身 config show
 
 # 设置配置
-daml-rag config set retrieval.top_k 10
+玉珍健身 config set retrieval.top_k 10
 ```
 
 ### 开发命令
 
 ```bash
 # 启动开发服务器
-daml-rag dev
+玉珍健身 dev
 
 # 运行测试
-daml-rag test
+玉珍健身 test
 
 # 代码格式化
-daml-rag format
+玉珍健身 format
 
 # 类型检查
-daml-rag lint
+玉珍健身 lint
 ```
 
 ## 📊 监控和调试
@@ -347,7 +347,7 @@ print(f"工具数量: {adapter_stats['tools_count']}")
 logging:
   log_level: "INFO"
   log_to_file: true
-  log_file_path: "./logs/daml-rag.log"
+  log_file_path: "./logs/玉珍健身.log"
   structured_logging: true
   component_log_levels:
     retrieval: "DEBUG"
@@ -373,13 +373,13 @@ docker-compose up -d
 
 ```bash
 # 构建生产版本
-daml-rag build --env production
+玉珍健身 build --env production
 
 # 部署到云平台
-daml-rag deploy --platform aws --region us-west-2
+玉珍健身 deploy --platform aws --region us-west-2
 
 # 监控部署状态
-daml-rag deploy status
+玉珍健身 deploy status
 ```
 
 ## 🔍 故障排除
@@ -389,41 +389,41 @@ daml-rag deploy status
 **Q: 模型调用失败**
 ```bash
 # 检查模型配置
-daml-rag config show learning.teacher_model
+玉珍健身 config show learning.teacher_model
 
 # 测试模型连接
-daml-rag test model --name deepseek
+玉珍健身 test model --name deepseek
 ```
 
 **Q: 检索结果为空**
 ```bash
 # 检查向量索引
-daml-rag health check --component retrieval
+玉珍健身 health check --component retrieval
 
 # 重建索引
-daml-rag rebuild-index --data-path ./data
+玉珍健身 rebuild-index --data-path ./data
 ```
 
 **Q: MCP 工具连接失败**
 ```bash
 # 检查 MCP 服务器状态
-daml-rag health check --component mcp
+玉珍健身 health check --component mcp
 
 # 重启 MCP 服务器
-daml-rag restart mcp --server professional-coach
+玉珍健身 restart mcp --server professional-coach
 ```
 
 ### 调试模式
 
 ```bash
 # 启用详细日志
-daml-rag dev --verbose
+玉珍健身 dev --verbose
 
 # 启用调试模式
-daml-rag dev --debug
+玉珍健身 dev --debug
 
 # 查看组件状态
-daml-rag status --detailed
+玉珍健身 status --detailed
 ```
 
 ## 📚 下一步
@@ -436,10 +436,10 @@ daml-rag status --detailed
 
 ## 🤝 获取帮助
 
-- 📖 [官方文档](https://docs.daml-rag.org)
-- 💬 [社区讨论](https://github.com/vivy1024/daml-rag-framework/discussions)
-- 🐛 [问题反馈](https://github.com/vivy1024/daml-rag-framework/issues)
-- 📧 [邮件支持](mailto:support@daml-rag.org)
+- 📖 [官方文档](https://docs.玉珍健身.org)
+- 💬 [社区讨论](https://github.com/vivy1024/玉珍健身-framework/discussions)
+- 🐛 [问题反馈](https://github.com/vivy1024/玉珍健身-framework/issues)
+- 📧 [邮件支持](mailto:support@玉珍健身.org)
 
 ---
 

@@ -1,12 +1,12 @@
 # 贡献指南
 
-欢迎为 DAML-RAG Framework 贡献代码！我们感谢您的每一个贡献。
+欢迎为 玉珍健身 框架 贡献代码！我们感谢您的每一个贡献。
 
 ## 🤝 如何贡献
 
 ### 报告问题
 
-1. 检查 [Issues](https://github.com/vivy1024/daml-rag-framework/issues) 确认问题未被报告
+1. 检查 [Issues](https://github.com/vivy1024/玉珍健身-framework/issues) 确认问题未被报告
 2. 创建新的 Issue，使用适当的模板
 3. 提供详细的问题描述、复现步骤和期望行为
 
@@ -22,8 +22,8 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/vivy1024/daml-rag-framework.git
-cd daml-rag-framework
+git clone https://github.com/vivy1024/玉珍健身-framework.git
+cd 玉珍健身-framework
 
 # 创建虚拟环境
 python -m venv venv
@@ -294,14 +294,14 @@ def mock_retriever():
 
 ### 沟通渠道
 
-- [GitHub Discussions](https://github.com/vivy1024/daml-rag-framework/discussions)
-- [GitHub Issues](https://github.com/vivy1024/daml-rag-framework/issues) - 问题反馈
+- [GitHub Discussions](https://github.com/vivy1024/玉珍健身-framework/discussions)
+- [GitHub Issues](https://github.com/vivy1024/玉珍健身-framework/issues) - 问题反馈
 - [Discord 社区](https://discord.gg/KDtg69cy) - 实时讨论
 - 邮件：[1765563156@qq.com](mailto:1765563156@qq.com)
 
 ## 🙏 致谢
 
-感谢所有为 DAML-RAG Framework 做出贡献的开发者！
+感谢所有为 玉珍健身 框架 做出贡献的开发者！
 
 ### 核心贡献者
 
@@ -315,7 +315,7 @@ def mock_retriever():
 
 ---
 
-有任何问题，欢迎通过 [GitHub Issues](https://github.com/vivy1024/daml-rag-framework/issues) 或邮件联系：[1765563156@qq.com](mailto:1765563156@qq.com)
+有任何问题，欢迎通过 [GitHub Issues](https://github.com/vivy1024/玉珍健身-framework/issues) 或邮件联系：[1765563156@qq.com](mailto:1765563156@qq.com)
 
 **项目作者**：薛小川 ([@vivy1024](https://github.com/vivy1024))  
 **版权所有 © 2025 薛小川。保留所有权利。**

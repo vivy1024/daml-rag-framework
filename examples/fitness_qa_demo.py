@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DAML-RAG框架使用示例
+玉珍健身框架使用示例
 演示如何使用三层检索系统进行智能问答
 """
 
@@ -8,7 +8,7 @@ import asyncio
 import logging
 from typing import Dict, Any, List
 
-# 导入DAML-RAG框架核心组件
+# 导入玉珍健身框架核心组件
 from daml_rag.core import DAMLRAGFramework
 from daml_rag.config import DAMLRAGConfig
 from daml_rag.models import Document
@@ -80,7 +80,7 @@ async def create_sample_config() -> DAMLRAGConfig:
 
 async def sample_fitness_qa():
     """示例：健身问答"""
-    print("🏋️ DAML-RAG框架健身问答示例")
+    print("🏋️ 玉珍健身框架健身问答示例")
     print("=" * 50)
 
     # 创建配置
@@ -90,7 +90,7 @@ async def sample_fitness_qa():
     framework = DAMLRAGFramework(config)
 
     try:
-        print("🚀 正在初始化DAML-RAG框架...")
+        print("🚀 正在初始化玉珍健身框架...")
         await framework.initialize()
 
         # 检查健康状态
@@ -242,7 +242,7 @@ async def main():
     """主函数"""
     setup_logging()
 
-    print("🎯 DAML-RAG框架使用示例")
+    print("🎯 玉珍健身框架使用示例")
     print("基于权威数据源的三层检索系统演示")
     print("=" * 60)
 
@@ -262,7 +262,7 @@ async def main():
 
 
 if __name__ == "__main__":
-    print("🚀 启动DAML-RAG框架演示...")
+    print("🚀 启动玉珍健身框架演示...")
     print("💡 前置条件:")
     print("   - Qdrant服务运行在 localhost:6333")
     print("   - Neo4j服务运行在 localhost:7474")

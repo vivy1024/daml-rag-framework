@@ -1,4 +1,4 @@
-# DAML-RAG Framework: Complete References / 完整参考文献
+# 玉珍健身 框架: Complete References / 完整参考文献
 
 **Version**: 1.0.0  
 **Created**: 2025-11-05  
@@ -194,7 +194,7 @@
     *Qdrant Team*  
     GitHub: [https://github.com/qdrant/qdrant](https://github.com/qdrant/qdrant)  
     ⭐ 19k+ stars  
-    **Reference Purpose**: Production vector database (used in DAML-RAG)
+    **Reference Purpose**: Production vector database (used in 玉珍健身)
 
 29. **Milvus**  
     *Zilliz*  
@@ -215,7 +215,7 @@
     GitHub: [https://github.com/neo4j/neo4j](https://github.com/neo4j/neo4j)  
     ⭐ 13k+ stars  
     Website: [https://neo4j.com/](https://neo4j.com/)  
-    **Reference Purpose**: Production graph database (used in DAML-RAG)
+    **Reference Purpose**: Production graph database (used in 玉珍健身)
 
 32. **ArangoDB**  
     *ArangoDB GmbH*  
@@ -247,14 +247,14 @@
     *"DeepSeek API Documentation."*  
     DeepSeek Documentation.  
     [https://platform.deepseek.com/docs](https://platform.deepseek.com/docs)  
-    **Key Contribution**: Cost-effective LLM API (used as teacher model in DAML-RAG)
+    **Key Contribution**: Cost-effective LLM API (used as teacher model in 玉珍健身)
 
 ### Embedding Model Standards / 嵌入模型标准
 
 36. **BAAI (Beijing Academy of Artificial Intelligence). (2025)**  
     *"BGE: BAAI General Embedding Model Series."*  
     GitHub: [https://github.com/FlagOpen/FlagEmbedding](https://github.com/FlagOpen/FlagEmbedding)  
-    **Key Contribution**: High-quality Chinese embedding models (used in DAML-RAG)
+    **Key Contribution**: High-quality Chinese embedding models (used in 玉珍健身)
 
 ---
 
@@ -298,29 +298,29 @@
 
 ### Theory Evolution Documents / 理论演进文档
 
-41. **BUILD_BODY Team. (2025)**  
+41. **薛小川 (Xue Xiaochuan). (2025)**  
     *"v1.0 Meta-Learning MCP Theory Foundation."*  
     Internal Documentation: `docs/理论基础/v1.0-元学习MCP/`  
     **Key Contribution**: Initial inference-time learning theory
 
-42. **BUILD_BODY Team. (2025)**  
+42. **薛小川 (Xue Xiaochuan). (2025)**  
     *"v1.1 MCP-CAF Framework Theory."*  
     Internal Documentation: `docs/理论基础/v1.1-MCP-CAF/`  
     **Key Contribution**: Collaborative agent framework, engineering risk identification
 
-43. **BUILD_BODY Team. (2025)**  
-    *"v2.0 DAML-RAG Framework Theory."*  
-    Internal Documentation: `docs/理论基础/v2.0-DAML-RAG/`  
+43. **薛小川 (Xue Xiaochuan). (2025)**  
+    *"v2.0 玉珍健身 框架 Theory."*  
+    Internal Documentation: `docs/理论基础/v2.0-玉珍健身/`  
     **Key Contribution**: Complete vertical domain RAG framework
 
 ### Implementation References / 实现参考
 
-44. **BUILD_BODY Team. (2025)**  
+44. **薛小川 (Xue Xiaochuan). (2025)**  
     *"Meta-Learning MCP Server Implementation."*  
     GitHub: `mcp-servers/meta-learning-mcp/`  
     **Key Contribution**: Production MCP server with GraphRAG integration
 
-45. **BUILD_BODY Team. (2025)**  
+45. **薛小川 (Xue Xiaochuan). (2025)**  
     *"Professional Fitness Coach MCP Server."*  
     GitHub: `mcp-servers/professional-fitness-coach-stdio/`  
     **Key Contribution**: Domain-specific MCP implementation
@@ -332,8 +332,8 @@
 ### BibTeX Format
 
 ```bibtex
-@software{daml_rag_2024,
-  title={DAML-RAG: Domain-Adaptive Meta-Learning RAG Framework},
+@software{yuzhen_fitness_2025,
+  title={玉珍健身: yuzhen-fitness Intelligent Fitness Framework},
   author={薛小川 (Xue Xiaochuan)},
   year={2025},
   url={https://github.com/...},
@@ -364,7 +364,7 @@ Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., ... & K
 
 Edge, D., Trinh, H., Cheng, N., Bradley, J., Chao, A., Mody, A., ... & Larson, J. (2025). From local to global: A graph RAG approach to query-focused summarization. arXiv preprint arXiv:2404.16130.
 
-BUILD_BODY Team. (2025). DAML-RAG: Domain-Adaptive Meta-Learning RAG Framework (Version 1.0.0) [Computer software]. https://github.com/...
+薛小川 (Xue Xiaochuan). (2025). 玉珍健身: yuzhen-fitness Intelligent Fitness Framework (Version 1.0.0) [Computer software]. https://github.com/...
 ```
 
 ---
@@ -391,7 +391,7 @@ BUILD_BODY Team. (2025). DAML-RAG: Domain-Adaptive Meta-Learning RAG Framework (
 
 ---
 
-**Maintainer**: DAML-RAG Framework Team  
+**Maintainer**: 玉珍健身 框架 Team  
 **Last Updated**: 2025-11-05  
 **Version**: 1.0.0  
 **Status**: 📚 Comprehensive and Continuously Updated

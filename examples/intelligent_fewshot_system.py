@@ -10,7 +10,7 @@
 4. 人工筛选界面和流程
 5. 自适应的fewshot优化
 
-作者：BUILD_BODY Team
+作者：薛小川 (Xue Xiaochuan)
 版本：v1.0.0
 日期：2025-11-05
 """

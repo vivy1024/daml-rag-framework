@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DAML-RAG Framework 简化测试脚本
+玉珍健身 框架 简化测试脚本
 测试核心组件功能
 """
 
@@ -15,7 +15,7 @@ current_dir = Path(__file__).parent
 sys.path.insert(0, str(current_dir))
 
 # 直接导入模块
-sys.path.insert(0, str(current_dir / "daml-rag-learning"))
+sys.path.insert(0, str(current_dir / "玉珍健身-learning"))
 
 # 配置日志
 logging.basicConfig(
@@ -192,7 +192,7 @@ async def test_adaptation_component():
 
 async def main():
     """主测试函数"""
-    print("🚀 DAML-RAG Framework 组件简化测试")
+    print("🚀 玉珍健身 框架 组件简化测试")
     print("="*60)
 
     test_results = []
@@ -225,7 +225,7 @@ async def main():
 
 
 if __name__ == "__main__":
-    print("DAML-RAG Framework 简化组件测试")
+    print("玉珍健身 框架 简化组件测试")
     print("="*60)
 
     try:

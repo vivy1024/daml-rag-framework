@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DAML-RAG框架配置示例
+玉珍健身框架配置示例
 展示不同场景下的配置选项
 """
 
@@ -363,7 +363,7 @@ def print_config_templates():
     """打印所有配置模板"""
     templates = get_all_config_templates()
 
-    print("📋 DAML-RAG框架配置模板")
+    print("📋 玉珍健身框架配置模板")
     print("=" * 60)
 
     for template in templates:

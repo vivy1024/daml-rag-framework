@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DAML-RAG Framework 演示启动脚本
+玉珍健身 框架 演示启动脚本
 """
 
 import asyncio
@@ -81,7 +81,7 @@ async def create_demo_config():
 async def demo_basic_queries(framework):
     """演示基本查询"""
     print("\n" + "="*60)
-    print("🎯 DAML-RAG Framework 基本查询演示")
+    print("🎯 玉珍健身 框架 基本查询演示")
     print("="*60)
 
     demo_queries = [
@@ -217,7 +217,7 @@ async def demo_config_validation(config):
 
 async def main():
     """主演示函数"""
-    print("🚀 DAML-RAG Framework 演示程序")
+    print("🚀 玉珍健身 框架 演示程序")
     print("="*60)
     print("正在初始化框架...")
 
@@ -271,8 +271,8 @@ async def main():
 
 
 if __name__ == "__main__":
-    print("DAML-RAG Framework v1.0.0 演示")
-    print("基于 BUILD_BODY v2.0 的 DAML-RAG 理论实现")
+    print("玉珍健身 框架 v1.0.0 演示")
+    print("基于 BUILD_BODY v2.0 的 玉珍健身 理论实现")
     print("="*60)
 
     asyncio.run(main())
