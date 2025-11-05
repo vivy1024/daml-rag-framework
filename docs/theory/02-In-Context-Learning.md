@@ -1,4 +1,4 @@
-# In-Context Learning: Inference-Time Adaptation Theory
+﻿# In-Context Learning: Inference-Time Adaptation Theory
 
 **Version**: 1.0.0  
 **Date**: 2025-11-05  
@@ -542,7 +542,7 @@ Daily cost: $45
 Monthly cost: $1350
 ```
 
-**玉珍健身 (yuzhen-fitness)**:
+**玉珍健身 (daml-rag)**:
 ```
 Student (90% queries):
     - Model: Ollama 8B (local, free)

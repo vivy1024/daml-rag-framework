@@ -1,4 +1,4 @@
-# 玉珍健身 框架
+# DAML-RAG 框架
 
 **领域自适应元学习RAG** - 面向垂直领域AI应用的生产就绪框架
 
@@ -15,7 +15,7 @@
 
 ## 📖 项目简介
 
-玉珍健身是一个生产就绪框架，整合了经过验证的技术——GraphRAG混合检索、上下文学习、教师-学生协同和基于MCP的多智能体编排——用于构建垂直领域AI应用，实现Token节省和成本优化。
+DAML-RAG是一个生产就绪框架，整合了经过验证的技术——GraphRAG混合检索、上下文学习、教师-学生协同和基于MCP的多智能体编排——用于构建垂直领域AI应用，实现Token节省和成本优化。
 
 **不是新理论，而是面向实践者的工程最佳实践框架。**
 
@@ -23,14 +23,14 @@
 
 ## 🔬 学术定位
 
-### 玉珍健身 是什么 ✅
+### DAML-RAG 是什么 ✅
 
 - **工程框架**：系统整合RAG [1]、GraphRAG [2]、ICL [3]、知识图谱 [4]
-- **生产系统**：在BUILD_BODY健身领域经过验证
+- **生产系统**：在玉珍健身领域经过验证
 - **成本优化**：通过教师-学生协同降低成本
 - **垂直领域聚焦**：专为知识密集型领域设计
 
-### 玉珍健身 不是什么 ❌
+### DAML-RAG 不是什么 ❌
 
 - ❌ **不是新的ML/AI理论**：没有创新算法或学习范式
 - ❌ **不声称通用优越性**：为特定用例设计
@@ -52,7 +52,7 @@
 
 ## 🏗️ 核心架构：三层检索系统
 
-玉珍健身的核心创新在于三层混合检索架构，完美结合向量检索、知识图谱和业务规则：
+DAML-RAG的核心创新在于三层混合检索架构，完美结合向量检索、知识图谱和业务规则：
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -122,14 +122,14 @@
 ┌─────────────────────────────────────────────────────────────┐
 │  📊 最终结果：5个精准推荐 + 推荐理由 + 置信度评分               │
 │  💡 Token优化：理论设计目标（未验证）                          │
-│  ⚡ 总响应时间：BUILD_BODY实测 ~20秒（笔记本，未优化）          │
+│  ⚡ 总响应时间：玉珍实测 ~20秒（笔记本，未优化）          │
 │  🎯 用户满意度：设计目标（未验证）                             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
 ### 🔧 技术栈选型
 
-玉珍健身支持灵活的技术栈选型，开发者可以根据偏好和需求选择：
+DAML-RAG支持灵活的技术栈选型，开发者可以根据偏好和需求选择：
 
 ```yaml
 # 向量数据库选择
@@ -166,21 +166,21 @@
 ## 📦 模块结构
 
 ```
-玉珍健身-framework/
-├── 玉珍健身-core/              # 🔧 核心框架
+daml-rag-framework/
+├── daml-rag-core/              # 🔧 核心框架
 │   ├── interfaces/             # 抽象接口定义
 │   ├── models/                 # 数据模型
 │   ├── config/                 # 配置管理
 │   └── utils/                  # 工具函数
-├── 玉珍健身-retrieval/         # 🔍 三层检索引擎
+├── daml-rag-retrieval/         # 🔍 三层检索引擎
 │   ├── vector/                 # 向量检索层
 │   ├── knowledge/              # 知识图谱层
 │   ├── rules/                  # 规则过滤层
 │   └── cache/                  # 缓存管理
-├── 玉珍健身-orchestration/     # 🎯 任务编排引擎
-├── 玉珍健身-learning/          # 🧠 推理时学习
-├── 玉珍健身-adapters/          # 🔌 领域适配器
-├── 玉珍健身-cli/               # 🚀 命令行工具
+├── daml-rag-orchestration/     # 🎯 任务编排引擎
+├── daml-rag-learning/          # 🧠 推理时学习
+├── daml-rag-adapters/          # 🔌 领域适配器
+├── daml-rag-cli/               # 🚀 命令行工具
 └── examples/                   # 📚 示例项目
 ```
 
@@ -191,20 +191,20 @@
 ### 安装
 
 ```bash
-pip install 玉珍健身-framework
+pip install daml-rag-framework
 ```
 
 ### 创建新项目
 
 ```bash
 # 创建健身领域AI应用
-玉珍健身 init my-fitness-app --domain fitness
+daml-rag init my-fitness-app --domain fitness
 
 # 创建医疗领域AI应用
-玉珍健身 init my-medical-app --domain healthcare
+daml-rag init my-medical-app --domain healthcare
 
 # 创建自定义领域AI应用
-玉珍健身 init my-custom-app --template custom
+daml-rag init my-custom-app --template custom
 ```
 
 ### 基本使用
@@ -317,7 +317,7 @@ domain_config:
 关键限制：
 
 - **硬件需求**：最低16GB内存，推荐32GB+
-- **响应时间**：~20秒（BUILD_BODY笔记本案例，未优化）
+- **响应时间**：~20秒（玉珍健身笔记本案例，未优化）
 - **规模限制**：单机超过30K节点性能下降
 - **部署**：生产环境建议分布式部署
 
@@ -351,7 +351,7 @@ domain_config:
 
 ### 案例研究
 
-- [BUILD_BODY案例研究](examples/BUILD_BODY_CASE_STUDY.md)（即将推出）- 参考实现
+- [玉珍健身案例研究](examples/YUZHEN_FITNESS_CASE_STUDY.md)（即将推出）- 参考实现
 
 ### 指南
 
@@ -369,15 +369,15 @@ domain_config:
 
 ## 📖 学术引用
 
-如果您在研究或项目中使用玉珍健身，请引用：
+如果您在研究或项目中使用DAML-RAG，请引用：
 
 ```bibtex
-@software{yuzhen_fitness_2025,
-  title={玉珍健身: yuzhen-fitness Intelligent Fitness Framework},
+@software{daml_rag_2024,
+  title={DAML-RAG: Domain-Adaptive Meta-Learning RAG Framework},
   author={薛小川 (Xue Xiaochuan)},
   year={2025},
   version={1.0.0},
-  url={https://github.com/vivy1024/玉珍健身-framework}
+  url={https://github.com/vivy1024/daml-rag-framework}
 }
 ```
 
@@ -409,7 +409,7 @@ domain_config:
 
 ## 🙏 致谢
 
-基于BUILD_BODY v2.0项目的理论和实践成果构建。
+基于玉珍健身 v2.0项目的理论和实践成果构建。
 
 **站在巨人的肩膀上：**
 - RAG：Lewis et al. (2020)

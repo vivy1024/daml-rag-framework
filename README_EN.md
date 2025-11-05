@@ -1,4 +1,4 @@
-# Yuzhen Fitness Framework
+# DAML-RAG Framework
 
 **Domain-Adaptive Meta-Learning RAG** - Production-Ready Framework for Vertical Domain AI Applications
 
@@ -15,7 +15,7 @@ English | **[简体中文](README.md)**
 
 ## 📖 Overview
 
-Yuzhen Fitness is a production-ready framework that integrates proven techniques—GraphRAG hybrid retrieval, In-Context Learning, Teacher-Student collaboration, and MCP-based multi-agent orchestration—for building vertical domain AI applications with token savings and cost optimization.
+DAML-RAG is a production-ready framework that integrates proven techniques—GraphRAG hybrid retrieval, In-Context Learning, Teacher-Student collaboration, and MCP-based multi-agent orchestration—for building vertical domain AI applications with token savings and cost optimization.
 
 **NOT a new theory, but an engineering best practice framework for practitioners.**
 
@@ -23,14 +23,14 @@ Yuzhen Fitness is a production-ready framework that integrates proven techniques
 
 ## 🔬 Academic Positioning
 
-### What 玉珍健身 IS ✅
+### What DAML-RAG IS ✅
 
 - **Engineering Framework**: Systematic integration of RAG [1], GraphRAG [2], ICL [3], Knowledge Graphs [4]
-- **Production System**: Validated in BUILD_BODY fitness domain
+- **Production System**: Validated in Yuzhen Fitness (玉珍健身) domain
 - **Cost Optimization**: Teacher-student collaboration reducing costs
 - **Vertical Domain Focus**: Specialized for knowledge-intensive domains
 
-### What 玉珍健身 is NOT ❌
+### What DAML-RAG is NOT ❌
 
 - ❌ **NOT a new ML/AI theory**: No novel algorithms or learning paradigms
 - ❌ **NOT claiming universal superiority**: Designed for specific use cases
@@ -52,7 +52,7 @@ Yuzhen Fitness is a production-ready framework that integrates proven techniques
 
 ## 🏗️ Core Architecture: Three-Tier Retrieval System
 
-玉珍健身's core innovation is the three-tier hybrid retrieval architecture, perfectly combining vector retrieval, knowledge graphs, and business rules:
+DAML-RAG's core innovation is the three-tier hybrid retrieval architecture, perfectly combining vector retrieval, knowledge graphs, and business rules:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -124,7 +124,7 @@ Yuzhen Fitness is a production-ready framework that integrates proven techniques
 │  📊 Final Results: 5 precise recommendations + reasoning +   │
 │                    confidence scores                         │
 │  💡 Token Optimization: Design target (not validated)        │
-│  ⚡ Total Response Time: BUILD_BODY measured ~20s (laptop,   │
+│  ⚡ Total Response Time: Yuzhen Fitness measured ~20s (laptop,   │
 │                         not optimized)                       │
 │  🎯 User Satisfaction: Design target (not validated)         │
 └─────────────────────────────────────────────────────────────┘
@@ -132,7 +132,7 @@ Yuzhen Fitness is a production-ready framework that integrates proven techniques
 
 ### 🔧 Technology Stack Selection
 
-玉珍健身 supports flexible technology stack selection, developers can choose based on preferences and needs:
+DAML-RAG supports flexible technology stack selection, developers can choose based on preferences and needs:
 
 ```yaml
 # Vector Database Options
@@ -169,21 +169,21 @@ Small Models:
 ## 📦 Module Structure
 
 ```
-玉珍健身-framework/
-├── 玉珍健身-core/              # 🔧 Core Framework
+daml-rag-framework/
+├── daml-rag-core/              # 🔧 Core Framework
 │   ├── interfaces/             # Abstract interface definitions
 │   ├── models/                 # Data models
 │   ├── config/                 # Configuration management
 │   └── utils/                  # Utility functions
-├── 玉珍健身-retrieval/         # 🔍 Three-tier Retrieval Engine
+├── daml-rag-retrieval/         # 🔍 Three-tier Retrieval Engine
 │   ├── vector/                 # Vector retrieval layer
 │   ├── knowledge/              # Knowledge graph layer
 │   ├── rules/                  # Rule filtering layer
 │   └── cache/                  # Cache management
-├── 玉珍健身-orchestration/     # 🎯 Task Orchestration Engine
-├── 玉珍健身-learning/          # 🧠 Inference-time Learning
-├── 玉珍健身-adapters/          # 🔌 Domain Adapters
-├── 玉珍健身-cli/               # 🚀 Command Line Tools
+├── daml-rag-orchestration/     # 🎯 Task Orchestration Engine
+├── daml-rag-learning/          # 🧠 Inference-time Learning
+├── daml-rag-adapters/          # 🔌 Domain Adapters
+├── daml-rag-cli/               # 🚀 Command Line Tools
 └── examples/                   # 📚 Example Projects
 ```
 
@@ -194,20 +194,20 @@ Small Models:
 ### Installation
 
 ```bash
-pip install 玉珍健身-framework
+pip install daml-rag-framework
 ```
 
 ### Create New Project
 
 ```bash
 # Create fitness domain AI application
-玉珍健身 init my-fitness-app --domain fitness
+daml-rag init my-fitness-app --domain fitness
 
 # Create healthcare domain AI application
-玉珍健身 init my-medical-app --domain healthcare
+daml-rag init my-medical-app --domain healthcare
 
 # Create custom domain AI application
-玉珍健身 init my-custom-app --template custom
+daml-rag init my-custom-app --template custom
 ```
 
 ### Basic Usage
@@ -320,7 +320,7 @@ domain_config:
 Key limitations:
 
 - **Hardware Requirements**: Minimum 16GB RAM, 32GB+ recommended
-- **Response Time**: ~20 seconds (BUILD_BODY case on laptop, not optimized)
+- **Response Time**: ~20 seconds (Yuzhen Fitness case on laptop, not optimized)
 - **Scale Limits**: Performance degrades with >30K nodes on single machine
 - **Deployment**: Distributed deployment recommended for production
 
@@ -354,7 +354,7 @@ The following are **theoretical design goals**, not validated metrics:
 
 ### Case Studies
 
-- [BUILD_BODY Case Study](examples/BUILD_BODY_CASE_STUDY.md) (Coming soon) - Reference implementation
+- [Yuzhen Fitness Case Study](examples/YUZHEN_FITNESS_CASE_STUDY.md) (Coming soon) - Reference implementation
 
 ### Guides
 
@@ -372,15 +372,15 @@ The following are **theoretical design goals**, not validated metrics:
 
 ## 📖 Citation
 
-If you use 玉珍健身 in your research or project, please cite:
+If you use DAML-RAG in your research or project, please cite:
 
 ```bibtex
-@software{yuzhen_fitness_2025,
-  title={玉珍健身: yuzhen-fitness Intelligent Fitness Framework},
+@software{daml_rag_2025,
+  title={DAML-RAG: Domain-Adaptive Meta-Learning RAG Framework},
   author={薛小川 (Xue Xiaochuan)},
   year={2025},
   version={1.0.0},
-  url={https://github.com/vivy1024/玉珍健身-framework}
+  url={https://github.com/vivy1024/daml-rag-framework}
 }
 ```
 
@@ -420,7 +420,7 @@ See [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
-Built on theoretical and practical achievements from the BUILD_BODY v2.0 project.
+Built on theoretical and practical achievements from the Yuzhen Fitness (玉珍健身) v2.0 project.
 
 **Standing on the shoulders of giants:**
 - RAG: Lewis et al. (2020)

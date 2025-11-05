@@ -1,7 +1,7 @@
 """
-玉珍健身 框架 - Domain-Adaptive Meta-Learning RAG
+DAML-RAG 框架 - Domain-Adaptive Meta-Learning RAG
 
-玉珍健身智能健身框架
+领域自适应元学习RAG框架
 """
 
 __version__ = "1.0.0"

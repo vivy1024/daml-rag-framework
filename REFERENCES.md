@@ -1,4 +1,4 @@
-# 玉珍健身 框架: Complete References / 完整参考文献
+﻿# DAML-RAG 框架: Complete References / 完整参考文献
 
 **Version**: 1.0.0  
 **Created**: 2025-11-05  
@@ -194,7 +194,7 @@
     *Qdrant Team*  
     GitHub: [https://github.com/qdrant/qdrant](https://github.com/qdrant/qdrant)  
     ⭐ 19k+ stars  
-    **Reference Purpose**: Production vector database (used in 玉珍健身)
+    **Reference Purpose**: Production vector database (used in DAML-RAG)
 
 29. **Milvus**  
     *Zilliz*  
@@ -215,7 +215,7 @@
     GitHub: [https://github.com/neo4j/neo4j](https://github.com/neo4j/neo4j)  
     ⭐ 13k+ stars  
     Website: [https://neo4j.com/](https://neo4j.com/)  
-    **Reference Purpose**: Production graph database (used in 玉珍健身)
+    **Reference Purpose**: Production graph database (used in DAML-RAG)
 
 32. **ArangoDB**  
     *ArangoDB GmbH*  
@@ -247,14 +247,14 @@
     *"DeepSeek API Documentation."*  
     DeepSeek Documentation.  
     [https://platform.deepseek.com/docs](https://platform.deepseek.com/docs)  
-    **Key Contribution**: Cost-effective LLM API (used as teacher model in 玉珍健身)
+    **Key Contribution**: Cost-effective LLM API (used as teacher model in DAML-RAG)
 
 ### Embedding Model Standards / 嵌入模型标准
 
 36. **BAAI (Beijing Academy of Artificial Intelligence). (2025)**  
     *"BGE: BAAI General Embedding Model Series."*  
     GitHub: [https://github.com/FlagOpen/FlagEmbedding](https://github.com/FlagOpen/FlagEmbedding)  
-    **Key Contribution**: High-quality Chinese embedding models (used in 玉珍健身)
+    **Key Contribution**: High-quality Chinese embedding models (used in DAML-RAG)
 
 ---
 
@@ -294,7 +294,7 @@
 
 ---
 
-## BUILD_BODY Project Internal References / BUILD_BODY项目内部参考
+## 鐜夌弽鍋ヨ韩 Project Internal References / 鐜夌弽鍋ヨ韩项目内部参考
 
 ### Theory Evolution Documents / 理论演进文档
 
@@ -309,8 +309,8 @@
     **Key Contribution**: Collaborative agent framework, engineering risk identification
 
 43. **薛小川 (Xue Xiaochuan). (2025)**  
-    *"v2.0 玉珍健身 框架 Theory."*  
-    Internal Documentation: `docs/理论基础/v2.0-玉珍健身/`  
+    *"v2.0 DAML-RAG 框架 Theory."*  
+    Internal Documentation: `docs/理论基础/v2.0-DAML-RAG/`  
     **Key Contribution**: Complete vertical domain RAG framework
 
 ### Implementation References / 实现参考
@@ -332,8 +332,8 @@
 ### BibTeX Format
 
 ```bibtex
-@software{yuzhen_fitness_2025,
-  title={玉珍健身: yuzhen-fitness Intelligent Fitness Framework},
+@software{daml_rag_2025,
+  title={DAML-RAG: Domain-Adaptive Meta-Learning RAG Framework},
   author={薛小川 (Xue Xiaochuan)},
   year={2025},
   url={https://github.com/...},
@@ -364,7 +364,7 @@ Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., ... & K
 
 Edge, D., Trinh, H., Cheng, N., Bradley, J., Chao, A., Mody, A., ... & Larson, J. (2025). From local to global: A graph RAG approach to query-focused summarization. arXiv preprint arXiv:2404.16130.
 
-薛小川 (Xue Xiaochuan). (2025). 玉珍健身: yuzhen-fitness Intelligent Fitness Framework (Version 1.0.0) [Computer software]. https://github.com/...
+薛小川 (Xue Xiaochuan). (2025). DAML-RAG: Domain-Adaptive Meta-Learning RAG Framework (Version 1.0.0) [Computer software]. https://github.com/vivy1024/daml-rag-framework
 ```
 
 ---
@@ -391,7 +391,7 @@ Edge, D., Trinh, H., Cheng, N., Bradley, J., Chao, A., Mody, A., ... & Larson, J
 
 ---
 
-**Maintainer**: 玉珍健身 框架 Team  
+**Maintainer**: DAML-RAG 框架 Team  
 **Last Updated**: 2025-11-05  
 **Version**: 1.0.0  
 **Status**: 📚 Comprehensive and Continuously Updated

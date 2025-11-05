@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 玉珍健身框架使用示例
 演示如何使用三层检索系统进行智能问答
@@ -50,7 +50,7 @@ async def create_sample_config() -> DAMLRAGConfig:
         knowledge_config=Neo4jConfig(
             uri="bolt://localhost:7687",
             username="neo4j",
-            password="build_body_2024",
+            password="鐜夌弽鍋ヨ韩_2024",
             database="neo4j"
         ),
 
@@ -185,7 +185,7 @@ async def demonstrate_three_tier_retrieval():
     knowledge_config = Neo4jConfig(
         uri="bolt://localhost:7687",
         username="neo4j",
-        password="build_body_2024"
+        password="鐜夌弽鍋ヨ韩_2024"
     )
 
     try:

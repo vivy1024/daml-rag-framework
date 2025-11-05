@@ -1,4 +1,4 @@
-# 玉珍健身 框架: Theoretical Overview
+﻿# 玉珍健身 框架: Theoretical Overview
 
 **Domain-Adaptive Meta-Learning Retrieval-Augmented Generation Framework**
 
@@ -12,7 +12,7 @@
 
 ## Abstract
 
-玉珍健身 (yuzhen-fitness) is a production preparation framework for rapidly building vertical domain AI applications. It combines GraphRAG hybrid retrieval (vector + graph + rules), in-context learning at inference time, teacher-student model collaboration, and MCP-based orchestration. **Note**: Token reduction, cost optimization, and quality improvements are design targets, not validated results.
+玉珍健身 (daml-rag) is a production preparation framework for rapidly building vertical domain AI applications. It combines GraphRAG hybrid retrieval (vector + graph + rules), in-context learning at inference time, teacher-student model collaboration, and MCP-based orchestration. **Note**: Token reduction, cost optimization, and quality improvements are design targets, not validated results.
 
 **Key Positioning**: Not a theoretical innovation, but an engineering best practice framework that integrates proven techniques (RAG [1], GraphRAG [2], In-Context Learning [3], Knowledge Graphs [4]) into a cohesive system for vertical domain applications.
 
@@ -282,7 +282,7 @@ Future Optimization Goals (To be validated):
 
 ### 6.2 Reference Architecture
 
-See [BUILD_BODY project theory docs](../../../../docs/理论基础/v2.0-玉珍健身/) for detailed implementations.
+See [鐜夌弽鍋ヨ韩 project theory docs](../../../../docs/理论基础/v2.0-玉珍健身/) for detailed implementations.
 
 ---
 
@@ -443,7 +443,7 @@ See [REFERENCES.md](../../REFERENCES.md) for complete bibliography.
 
 ```bibtex
 @software{yuzhen_fitness_2025,
-  title={玉珍健身: yuzhen-fitness Intelligent Fitness Framework},
+  title={玉珍健身: daml-rag Intelligent Fitness Framework},
   author={薛小川 (Xue Xiaochuan)},
   year={2025},
   version={1.0.0},

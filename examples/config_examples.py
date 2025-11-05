@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 玉珍健身框架配置示例
 展示不同场景下的配置选项
@@ -102,7 +102,7 @@ def create_development_config() -> DAMLRAGConfig:
         knowledge_config=Neo4jConfig(
             uri="bolt://localhost:7687",
             username="neo4j",
-            password="build_body_2024",
+            password="鐜夌弽鍋ヨ韩_2024",
             database="neo4j",
             max_connection_pool_size=10,
             connection_timeout=10
@@ -155,7 +155,7 @@ def create_local_faiss_config() -> DAMLRAGConfig:
         knowledge_config=Neo4jConfig(
             uri="bolt://localhost:7687",
             username="neo4j",
-            password="build_body_2024",
+            password="鐜夌弽鍋ヨ韩_2024",
             database="neo4j",
             max_connection_pool_size=5
         ),
@@ -262,7 +262,7 @@ def create_minimal_config() -> DAMLRAGConfig:
         knowledge_config=Neo4jConfig(
             uri="bolt://localhost:7687",
             username="neo4j",
-            password="build_body_2024",
+            password="鐜夌弽鍋ヨ韩_2024",
             database="neo4j",
             max_connection_pool_size=2
         ),

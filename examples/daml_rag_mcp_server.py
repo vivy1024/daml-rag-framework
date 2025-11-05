@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 玉珍健身框架 MCP服务器示例
 基于三层检索系统的通用MCP工具集成
@@ -698,7 +698,7 @@ def create_sample_config() -> DAMLRAGConfig:
         knowledge_config=Neo4jConfig(
             uri="bolt://localhost:7687",
             username="neo4j",
-            password="build_body_2024"
+            password="鐜夌弽鍋ヨ韩_2024"
         ),
 
         # 三层检索权重

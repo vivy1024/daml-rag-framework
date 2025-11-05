@@ -1,5 +1,5 @@
 """
-玉珍健身 检索引擎模块
+DAML-RAG 检索引擎模块
 """
 
 from .vector import VectorRetriever, FaissVectorRetriever

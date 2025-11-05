@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 玉珍健身 框架 演示启动脚本
 """
@@ -272,7 +272,7 @@ async def main():
 
 if __name__ == "__main__":
     print("玉珍健身 框架 v1.0.0 演示")
-    print("基于 BUILD_BODY v2.0 的 玉珍健身 理论实现")
+    print("基于 鐜夌弽鍋ヨ韩 v2.0 的 玉珍健身 理论实现")
     print("="*60)
 
     asyncio.run(main())

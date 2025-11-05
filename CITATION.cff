@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
-title: "玉珍健身: yuzhen-fitness Intelligent Fitness Framework"
+title: "DAML-RAG: Domain-Adaptive Meta-Learning RAG Framework"
 version: 1.0.0
 date-released: 2025-11-05
 authors:
@@ -30,12 +30,12 @@ keywords:
   - model-context-protocol
 
 abstract: |
-  玉珍健身 (yuzhen-fitness) is a 
+  DAML-RAG (Domain-Adaptive Meta-Learning RAG) is a 
   production-ready framework for rapidly building vertical domain AI applications. 
   It combines GraphRAG hybrid retrieval (vector + graph + rules), in-context learning 
   at inference time, teacher-student model collaboration, and MCP-based multi-agent 
-  orchestration to achieve 85% token reduction and 93% cost optimization while 
-  improving quality by 38%. 
+  orchestration to achieve token efficiency and cost optimization while 
+  improving response quality. 
   
   The framework is not a theoretical innovation but an engineering best practice 
   that integrates proven techniques (RAG, GraphRAG, In-Context Learning, Knowledge 
@@ -124,13 +124,13 @@ references:
 
 preferred-citation:
   type: software
-  title: "玉珍健身: yuzhen-fitness Intelligent Fitness Framework"
+  title: "DAML-RAG: Domain-Adaptive Meta-Learning RAG Framework"
   authors:
     - family-names: "薛"
       given-names: "小川"
       alias: "Xue Xiaochuan"
   version: 1.0.0
   year: 2025
-  url: "https://github.com/vivy1024/玉珍健身-framework"
+  url: "https://github.com/vivy1024/daml-rag-framework"
   license: Apache-2.0
 

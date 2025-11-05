@@ -1,5 +1,5 @@
 """
-玉珍健身 CLI 主入口
+DAML-RAG CLI 主入口
 """
 
 import argparse
@@ -18,7 +18,7 @@ from .utils import setup_cli_logging
 
 
 class DAMLRAGCLI:
-    """玉珍健身 命令行工具主类"""
+    """DAML-RAG 命令行工具主类"""
 
     def __init__(self):
         self.commands = {
@@ -32,18 +32,18 @@ class DAMLRAGCLI:
     def create_parser(self) -> argparse.ArgumentParser:
         """创建命令行解析器"""
         parser = argparse.ArgumentParser(
-            prog='玉珍健身',
-            description='玉珍健身 框架 - 玉珍健身智能健身框架',
+            prog='daml-rag',
+            description='DAML-RAG 框架 - 领域自适应元学习RAG框架',
             formatter_class=argparse.RawDescriptionHelpFormatter,
             epilog="""
 示例:
-  玉珍健身 init my-fitness-app --domain fitness    # 创建健身应用
-  玉珍健身 scaffold exercise-tool                   # 创建工具脚手架
-  玉珍健身 deploy --platform docker                # Docker部署
-  玉珍健身 health                                  # 健康检查
-  玉珍健身 config show                              # 显示配置
+  daml-rag init my-fitness-app --domain fitness    # 创建健身应用
+  daml-rag scaffold exercise-tool                   # 创建工具脚手架
+  daml-rag deploy --platform docker                # Docker部署
+  daml-rag health                                  # 健康检查
+  daml-rag config show                              # 显示配置
 
-更多信息请访问: https://github.com/vivy1024/玉珍健身-framework
+更多信息请访问: https://github.com/vivy1024/daml-rag-framework
             """
         )
 

@@ -1,4 +1,4 @@
-# GraphRAG Hybrid Retrieval Theory
+﻿# GraphRAG Hybrid Retrieval Theory
 
 **Version**: 1.0.0  
 **Created**: 2025-11-05  
@@ -359,7 +359,7 @@ class RuleEngine:
 
 ### 6.1 Current Implementation Status
 
-**⚠️ BUILD_BODY Reference Implementation**:
+**⚠️ 鐜夌弽鍋ヨ韩 Reference Implementation**:
 
 **Actual Measured Data**:
 - Token consumption: 500-800 tokens (DeepSeek + User Profile MCP)

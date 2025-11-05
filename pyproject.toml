@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "玉珍健身-framework"
+name = "daml-rag-framework"
 version = "1.0.0"
-description = "yuzhen-fitness Intelligent Fitness Framework for Vertical Domain AI Applications"
+description = "Domain-Adaptive Meta-Learning RAG Framework for Vertical Domain AI Applications"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "Apache-2.0"}
@@ -90,20 +90,20 @@ docs = [
 ]
 
 all = [
-    "玉珍健身-framework[dev,docs]",
+    "daml-rag-framework[dev,docs]",
 ]
 
 [project.urls]
-Homepage = "https://github.com/vivy1024/玉珍健身-framework"
-Documentation = "https://github.com/vivy1024/玉珍健身-framework/tree/main/docs"
-Repository = "https://github.com/vivy1024/玉珍健身-framework"
-"Bug Tracker" = "https://github.com/vivy1024/玉珍健身-framework/issues"
-Changelog = "https://github.com/vivy1024/玉珍健身-framework/blob/main/CHANGELOG.md"
-"Theory Evolution" = "https://github.com/vivy1024/玉珍健身-framework/blob/main/docs/theory/00-THEORY_EVOLUTION.md"
-"References" = "https://github.com/vivy1024/玉珍健身-framework/blob/main/REFERENCES.md"
+Homepage = "https://github.com/vivy1024/daml-rag-framework"
+Documentation = "https://github.com/vivy1024/daml-rag-framework/tree/main/docs"
+Repository = "https://github.com/vivy1024/daml-rag-framework"
+"Bug Tracker" = "https://github.com/vivy1024/daml-rag-framework/issues"
+Changelog = "https://github.com/vivy1024/daml-rag-framework/blob/main/CHANGELOG.md"
+"Theory Evolution" = "https://github.com/vivy1024/daml-rag-framework/blob/main/docs/theory/00-THEORY_EVOLUTION.md"
+"References" = "https://github.com/vivy1024/daml-rag-framework/blob/main/REFERENCES.md"
 
 [project.scripts]
-玉珍健身 = "daml_rag_cli.cli:main"
+daml-rag = "daml_rag_cli.cli:main"
 
 [tool.setuptools]
 package-dir = {"" = "."}
