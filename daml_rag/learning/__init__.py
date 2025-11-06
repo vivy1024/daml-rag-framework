@@ -45,6 +45,10 @@ from .adaptation import (
     AdaptationResult
 )
 
+from .query_classifier import (
+    QueryComplexityClassifier
+)
+
 __all__ = [
     # Memory management
     "MemoryManager",
@@ -82,5 +86,8 @@ __all__ = [
     "AdaptationStrategy",
     "AdaptationTarget",
     "AdaptationAction",
-    "AdaptationResult"
+    "AdaptationResult",
+
+    # Query classifier
+    "QueryComplexityClassifier"
 ]

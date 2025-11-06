@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "daml-rag-framework"
-version = "1.0.0"
+version = "1.1.0"
 description = "Domain-Adaptive Meta-Learning RAG Framework for Vertical Domain AI Applications"
 readme = "README.md"
 requires-python = ">=3.8"

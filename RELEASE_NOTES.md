@@ -1,159 +1,199 @@
-# DAML-RAG Framework - Release Notes
+# DAML-RAG Framework v1.1.0 Release Notes
 
-## v1.0.0 - 2025-11-06 🎉
-
-**首次正式发布！**
-
-### 🚀 发布信息
-
-- **PyPI**: https://pypi.org/project/daml-rag-framework/
-- **GitHub**: https://github.com/vivy1024/daml-rag-framework
-- **文档**: https://github.com/vivy1024/daml-rag-framework/tree/main/docs
-
-### 📦 安装
-
-```bash
-pip install daml-rag-framework
-```
-
-### ✨ 主要特性
-
-#### 1. 三层混合检索系统
-- **向量检索层**: 支持 Qdrant、FAISS、Milvus 等多种向量数据库
-- **知识图谱层**: 基于 Neo4j 的结构化关系推理
-- **规则过滤层**: 领域专业规则引擎
-
-#### 2. 上下文学习优化
-- Few-Shot 学习支持
-- 案例推理维持质量
-- 动态示例选择
-
-#### 3. 教师-学生模型架构
-- DeepSeek 作为教师模型（高质量）
-- Ollama 作为学生模型（成本优化）
-- 自动质量监控和升级机制
-
-#### 4. MCP 多智能体编排
-- 基于 Model Context Protocol 的标准化协同
-- 灵活的任务调度和执行
-- 完整的错误处理和容错
-
-#### 5. 领域适配器
-- 健身领域适配器（参考实现）
-- 可扩展的适配器架构
-- 领域知识图谱构建工具
-
-### 📊 项目统计
-
-- **核心模块**: 6 个
-- **代码行数**: ~10,000+
-- **依赖包**: 20+
-- **文档页**: 15+
-- **示例代码**: 10+
-
-### 🏗️ 架构亮点
-
-```
-daml_rag/
-├── core.py              # 核心框架
-├── retrieval/           # 三层检索
-│   ├── vector/
-│   ├── knowledge/
-│   └── rules/
-├── learning/            # 推理时学习
-├── orchestration/       # MCP编排
-├── adapters/            # 领域适配
-└── cli/                 # 命令行工具
-```
-
-### 📚 文档资源
-
-- **快速开始**: [QUICKSTART.md](QUICKSTART.md)
-- **发布指南**: [PUBLISHING.md](PUBLISHING.md)
-- **构建指南**: [BUILD_AND_PUBLISH.md](BUILD_AND_PUBLISH.md)
-- **限制说明**: [LIMITATIONS.md](LIMITATIONS.md)
-- **理论基础**: [docs/theory/](docs/theory/)
-- **参考文献**: [REFERENCES.md](REFERENCES.md)
-
-### 🔧 技术栈
-
-- **Python**: 3.8+
-- **向量数据库**: Qdrant, FAISS
-- **图数据库**: Neo4j
-- **AI 模型**: DeepSeek, Ollama, OpenAI
-- **Web 框架**: FastAPI
-- **异步**: asyncio, aiohttp
-
-### 🎯 使用场景
-
-- 垂直领域 AI 应用开发
-- 知识密集型问答系统
-- 智能推荐引擎
-- 专业领域助手
-- RAG 系统优化
-
-### 📝 示例应用
-
-1. **玉珍健身 AI 教练**
-   - 个性化训练计划生成
-   - 动作推荐与优化
-   - 营养建议与分析
-
-2. **医疗诊断助手**（模板）
-3. **法律咨询系统**（模板）
-4. **教育辅导平台**（模板）
-
-### 🐛 已知限制
-
-- 硬件需求：最低 16GB 内存
-- 响应时间：~20秒（未优化）
-- 规模限制：单机 30K 节点
-- 详见 [LIMITATIONS.md](LIMITATIONS.md)
-
-### 🔜 未来计划
-
-#### v1.1.0（计划中）
-- [ ] 性能优化（缓存机制）
-- [ ] 并行化查询处理
-- [ ] CLI 工具完善
-- [ ] 更多示例应用
-
-#### v1.2.0（计划中）
-- [ ] 分布式部署支持
-- [ ] 更多领域适配器
-- [ ] 增强的监控面板
-- [ ] API 接口文档
-
-#### v2.0.0（规划中）
-- [ ] 多模态检索支持
-- [ ] 自动化领域适配
-- [ ] 企业级特性
-- [ ] 云端部署方案
-
-### 🙏 致谢
-
-本项目基于以下研究和技术：
-- RAG (Lewis et al., 2020)
-- GraphRAG (Microsoft Research, 2024)
-- In-Context Learning (Brown et al., 2020)
-- Model Context Protocol (Anthropic, 2024)
-
-特别感谢玉珍健身项目的实践验证。
-
-### 📞 联系方式
-
-- **作者**: 薛小川 (Xue Xiaochuan)
-- **邮箱**: 1765563156@qq.com
-- **GitHub**: https://github.com/vivy1024
-- **Issues**: https://github.com/vivy1024/daml-rag-framework/issues
-
-### 📄 许可证
-
-Apache License 2.0
+**发布日期**: 2025-11-07  
+**版本号**: v1.1.0  
+**作者**: 薛小川 (Xue Xiaochuan)
 
 ---
 
-**让 AI 更懂专业领域！** 🚀
+## 🎯 重大更新
 
-**版权所有 © 2025 薛小川。保留所有权利。**
+### BGE查询复杂度分类器
 
+本次更新的核心是集成了基于 **BAAI/bge-base-zh-v1.5** 向量模型的智能查询复杂度分类器，大幅优化了教师-学生模型的选择策略。
+
+---
+
+## ✨ 新功能
+
+### 1. QueryComplexityClassifier (查询复杂度分类器)
+
+**位置**: `daml_rag.learning.query_classifier`
+
+**核心功能**:
+- 🎯 基于语义相似度的智能分类
+- 🧠 使用 BGE 中文向量模型（768维）
+- ⚡ 余弦相似度计算 + 动态阈值
+- 🔄 懒加载 + 向量缓存优化
+- 🛡️ 硬编码关键词兜底策略
+
+**使用示例**:
+
+```python
+from daml_rag.learning import QueryComplexityClassifier
+
+# 初始化分类器
+classifier = QueryComplexityClassifier(
+    similarity_threshold=0.7,  # 高相似度阈值
+    moderate_threshold=0.5,    # 低相似度阈值
+    model_name="BAAI/bge-base-zh-v1.5"
+)
+
+# 分类查询
+is_complex, similarity, reason = classifier.classify_complexity(
+    "帮我设计一套增肌训练计划，我有腰椎间盘突出"
+)
+
+print(f"复杂度: {is_complex}")
+print(f"相似度: {similarity:.2f}")
+print(f"理由: {reason}")
+
+# 输出:
+# 复杂度: True
+# 相似度: 0.85
+# 理由: 与复杂查询示例高度相似（相似度=0.85）: '帮我设计一套增肌训练计划，我有...'
+```
+
+**自定义复杂查询库**:
+
+```python
+classifier = QueryComplexityClassifier(
+    complex_query_examples=[
+        "制定详细的康复训练方案",
+        "设计周期化力量训练计划",
+        "个性化营养和训练指导"
+    ]
+)
+
+# 动态添加示例
+classifier.add_complex_example("全面的健身指导方案")
+```
+
+---
+
+## 📊 技术原理
+
+### 余弦相似度分类
+
+```
+数学公式:
+    similarity = (A · B) / (||A|| * ||B||)
+
+分类规则:
+    - similarity ≥ 0.7  → 复杂查询 → Teacher Model (DeepSeek)
+    - similarity < 0.5  → 简单查询 → Student Model (Ollama)
+    - 0.5 ≤ similarity < 0.7 → 中等复杂度 → Context-Dependent
+```
+
+### 三层降级策略
+
+1. **一级**: BGE向量模型语义分类（最优）
+2. **二级**: 硬编码关键词匹配（降级）
+3. **三级**: 保守策略（默认使用教师模型）
+
+---
+
+## 🚀 性能优化
+
+### 懒加载机制
+- 首次调用时才加载 BGE 模型
+- 避免不必要的内存占用
+
+### 向量缓存
+- 预计算复杂查询向量库
+- 避免重复编码，提升响应速度
+
+### 兜底策略
+- 模型加载失败时自动降级
+- 使用关键词匹配保证可用性
+
+---
+
+## 🔧 API 变更
+
+### 新增模块
+
+- `daml_rag.learning.query_classifier`
+  - `QueryComplexityClassifier` (主类)
+
+### 新增依赖
+
+无额外依赖（使用已有的 `sentence-transformers`）
+
+---
+
+## 📦 升级指南
+
+### 从 v1.0.0 升级到 v1.1.0
+
+**1. 更新包**:
+```bash
+pip install --upgrade daml-rag-framework
+```
+
+**2. 导入新模块**:
+```python
+from daml_rag.learning import QueryComplexityClassifier
+```
+
+**3. 集成到现有系统**:
+```python
+from daml_rag import DAMLRAGFramework
+from daml_rag.learning import QueryComplexityClassifier, ModelManager
+
+# 创建分类器
+classifier = QueryComplexityClassifier()
+
+# 在模型选择时使用
+def select_model(query: str) -> str:
+    is_complex, sim, reason = classifier.classify_complexity(query)
+    
+    if is_complex:
+        return "teacher"  # DeepSeek
+    else:
+        return "student"  # Ollama
+```
+
+**向后兼容性**: ✅ 完全兼容 v1.0.0
+
+---
+
+## 🐛 Bug 修复
+
+本次版本无 bug 修复（纯功能新增）
+
+---
+
+## 📚 文档更新
+
+- ✅ README.md - 新增 BGE 分类器说明
+- ✅ CHANGELOG.md - 详细记录变更
+- ✅ RELEASE_NOTES.md - 本发布说明
+
+---
+
+## 🔮 下一步计划 (v1.2.0)
+
+- [ ] 更多领域适配器（医疗、金融、法律）
+- [ ] 图形化配置界面
+- [ ] 高级监控仪表板
+- [ ] 分布式部署支持
+
+---
+
+## 🙏 致谢
+
+感谢 BUILD_BODY 项目在实际应用中的验证和反馈，使得 BGE 分类器得以成功集成。
+
+---
+
+## 📞 联系方式
+
+- **作者**: 薛小川 (Xue Xiaochuan)
+- **邮箱**: 1765563156@qq.com
+- **GitHub**: https://github.com/vivy1024/daml-rag-framework
+- **Issues**: https://github.com/vivy1024/daml-rag-framework/issues
+
+---
+
+**Happy Coding! 🚀**

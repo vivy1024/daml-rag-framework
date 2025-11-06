@@ -4,7 +4,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-1.0.0-orange.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-1.1.0-orange.svg)](CHANGELOG.md)
 [![Package Status](https://img.shields.io/badge/Package-Ready_to_Publish-brightgreen.svg)](BUILD_AND_PUBLISH.md)
 [![Build](https://img.shields.io/badge/Build-Passing-success.svg)](scripts/build.sh)
 
@@ -48,7 +48,14 @@ DAML-RAG是一个生产就绪框架，整合了经过验证的技术——GraphR
 - 🎯 **GraphRAG混合检索**：向量 + 图谱 + 规则三层架构
 - 🧠 **上下文学习** ⭐(v2.0修正)：Few-Shot + 案例推理维持质量
 - ⚡ **教师-学生模型**：DeepSeek（教师）+ Ollama（学生）降低成本
-- 🔌 **MCP编排**：基于Model Context Protocol的标准化多智能体协同
+- 🔌 **MCP编排**：基于Kahn拓扑排序的智能任务编排
+  - DAG任务分解：自动识别工具依赖关系
+  - 异步并行执行：最大化吞吐量
+- 🎯 **BGE智能分类** ⭐(v1.1.0新增)：基于向量语义的查询复杂度分类
+  - BAAI/bge-base-zh-v1.5 中文向量模型
+  - 余弦相似度自动分类（> 0.7 复杂查询）
+  - 智能选择教师/学生模型，优化成本
+  - 懒加载 + 向量缓存 + 关键词兜底
 - 🛡️ **质量保障**：自动质量监控和升级机制
 - 📊 **生产就绪**：完整的监控、缓存、容错系统
 
@@ -386,10 +393,16 @@ domain_config:
 
 ### 理论基础
 
-- [理论演进历史](docs/theory/00-理论演进历史.md)
+- [理论演进历史](docs/theory/00-理论演进历史.md) ([English](docs/theory/00-THEORY_EVOLUTION.md))
 - [GraphRAG混合检索理论](docs/theory/01-GraphRAG混合检索理论.md)
 - [推理时上下文学习理论](docs/theory/02-推理时上下文学习理论.md)
 - [框架总览](docs/theory/框架总览.md)
+
+### 架构规划 ⭐ 新增
+
+- **[MCP编排器实际实现](docs/architecture/mcp-orchestration-实际实现.md)** - 从生产环境提取的Kahn拓扑排序编排器，包含循环检测、异步并行、TTL缓存
+- **[数据清洗与微调架构](docs/architecture/数据清洗与微调架构.md)** ([English](docs/architecture/data-cleaning-and-finetuning.md)) - 通用数据清洗流程和LoRA微调架构（适用于任何领域）
+- **[框架多样性探索策略](docs/architecture/框架多样性探索策略.md)** ([English](docs/architecture/framework-diversity-strategies.md)) - BGE分类器、智能预加载（可选）、Thompson Sampling（理论探索）等技术决策记录
 
 ### 案例研究
 
