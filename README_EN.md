@@ -347,14 +347,22 @@ The following are **theoretical design goals**, not validated metrics:
 
 ### Theory
 
-- [Theory Evolution](docs/theory/00-THEORY_EVOLUTION.md)
+- [Theory Evolution](docs/theory/00-THEORY_EVOLUTION.md) ([中文](docs/theory/00-理论演进历史.md))
 - [GraphRAG Hybrid Retrieval](docs/theory/01-GraphRAG-Hybrid-Retrieval.md)
 - [In-Context Learning](docs/theory/02-In-Context-Learning.md)
 - [Framework Overview](docs/theory/FRAMEWORK_OVERVIEW.md)
 
+### Architecture Planning ⭐ New
+
+- **[Data Cleaning and Finetuning Architecture](docs/architecture/data-cleaning-and-finetuning.md)** ([中文](docs/architecture/数据清洗与微调架构.md)) - Generic data cleaning workflow and LoRA finetuning architecture (applicable to any domain)
+- **[Framework Diversity Strategies](docs/architecture/framework-diversity-strategies.md)** ([中文](docs/architecture/框架多样性探索策略.md)) - Technical decision records including preloading strategies, LLM selection optimization, Thompson Sampling retention, etc.
+
 ### Case Studies
 
 - [Yuzhen Fitness Case Study](examples/YUZHEN_FITNESS_CASE_STUDY.md) (Coming soon) - Reference implementation
+- **BUILD_BODY Fitness Application Implementation** ⭐
+  - [Data Cleaning and Finetuning Implementation Details](../build_body/mcp-servers/meta-learning-mcp/docs/02-核心架构/数据清洗与微调架构规划.md) - Fitness domain specific implementation
+  - [Framework Diversity Exploration Process](../build_body/mcp-servers/meta-learning-mcp/docs/07-综合架构分析/FRAMEWORK_DIVERSITY_EXPLORATION.md) - Fitness scenario decision-making process
 
 ### Guides
 

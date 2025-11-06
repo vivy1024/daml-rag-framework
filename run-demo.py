@@ -1,6 +1,6 @@
 ﻿#!/usr/bin/env python3
 """
-玉珍健身 框架 演示启动脚本
+daml-rag-framework 演示启动脚本
 """
 
 import asyncio

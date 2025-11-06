@@ -1,5 +1,5 @@
 """
-DAML-RAG健身框架核心实现
+daml-rag-framework核心实现
 """
 
 import asyncio

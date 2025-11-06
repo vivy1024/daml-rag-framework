@@ -35,7 +35,6 @@ Example:
     >>> print(f"复杂度: {is_complex}, 相似度: {similarity:.2f}, 理由: {reason}")
     >>> # 输出: 复杂度: True, 相似度: 0.85, 理由: 与复杂查询示例高度相似
 
-作者：薛小川 (Xue Xiaochuan)
 版本：v1.1.0
 日期：2025-11-07
 """

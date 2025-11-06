@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-玉珍健身 框架 简化测试脚本
+daml-rag-framework 简化测试脚本
 测试核心组件功能
 """
 
