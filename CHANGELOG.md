@@ -12,6 +12,26 @@
 - 图形化配置界面
 - 高级监控仪表板
 
+## [1.2.0] - 2025-11-07
+
+### 新增
+- 🎯 **MCP编排器**（MCPOrchestrator）：
+  - 基于Kahn拓扑排序的任务编排算法
+  - DFS循环依赖检测
+  - 异步并行执行（asyncio.gather）
+  - TTL缓存机制（避免重复调用）
+  - 支持真实MCP调用和Mock模式
+  - 完整的执行统计和摘要
+
+### 修复
+- 🐛 修复模块化目录遗留问题：
+  - 将 `daml-rag-orchestration/mcp_orchestrator.py` 同步到 `daml_rag/orchestration/`
+  - 更新模块导出，支持容错导入
+
+### 文档
+- 📚 新增 MCPOrchestrator 使用文档和示例
+- 📚 更新模块结构说明
+
 ## [1.1.0] - 2025-11-07
 
 ### 新增

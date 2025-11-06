@@ -4,7 +4,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-1.1.0-orange.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-1.2.0-orange.svg)](CHANGELOG.md)
 [![Package Status](https://img.shields.io/badge/Package-Ready_to_Publish-brightgreen.svg)](BUILD_AND_PUBLISH.md)
 [![Build](https://img.shields.io/badge/Build-Passing-success.svg)](scripts/build.sh)
 
