@@ -5,8 +5,12 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/Version-1.0.0-orange.svg)](CHANGELOG.md)
+[![Package Status](https://img.shields.io/badge/Package-Ready_to_Publish-brightgreen.svg)](BUILD_AND_PUBLISH.md)
+[![Build](https://img.shields.io/badge/Build-Passing-success.svg)](scripts/build.sh)
 
 **[English](README_EN.md)** | 简体中文
+
+> 📦 **打包状态**: 项目已完成打包配置，可以发布到 PyPI！详见 [BUILD_AND_PUBLISH.md](BUILD_AND_PUBLISH.md)
 
 > 🎓 **结合GraphRAG、上下文学习、多智能体协同，打造成本高效的垂直领域AI系统**  
 > 🚀 **生产就绪框架，实现Token优化和成本控制的工程最佳实践**
@@ -190,8 +194,44 @@ daml-rag-framework/
 
 ### 安装
 
+#### 方式1：从 PyPI 安装（推荐）✅
+
 ```bash
 pip install daml-rag-framework
+```
+
+**PyPI 页面**: https://pypi.org/project/daml-rag-framework/
+
+#### 方式2：从源码安装（开发版）
+
+```bash
+# 克隆仓库
+git clone https://github.com/vivy1024/daml-rag-framework.git
+cd daml-rag-framework
+
+# 安装依赖并安装框架（开发模式）
+pip install -e .
+
+# 或者构建并安装
+python -m pip install --upgrade build
+python -m build
+pip install dist/*.whl
+```
+
+#### 方式3：从 GitHub 直接安装
+
+```bash
+pip install git+https://github.com/vivy1024/daml-rag-framework.git
+```
+
+### 验证安装
+
+```bash
+# 验证导入
+python -c "from daml_rag import DAMLRAGFramework; print('✅ 安装成功')"
+
+# 测试 CLI
+daml-rag --help
 ```
 
 ### 创建新项目
@@ -210,8 +250,9 @@ daml-rag init my-custom-app --template custom
 ### 基本使用
 
 ```python
+import asyncio
 from daml_rag import DAMLRAGFramework, DAMLRAGConfig
-from daml_rag_adapters.fitness import FitnessDomainAdapter
+from daml_rag.adapters import FitnessDomainAdapter
 
 async def main():
     # 加载配置
@@ -341,6 +382,7 @@ domain_config:
 ### 必读文档
 
 - **[LIMITATIONS.md](LIMITATIONS.md)** ⚠️ - 限制和约束（必读！）
+- **[PUBLISHING.md](PUBLISHING.md)** 📦 - PyPI 发布指南（开发者必读）
 
 ### 理论基础
 
@@ -359,6 +401,12 @@ domain_config:
 - [架构设计](docs/architecture/)（即将推出）
 - [API文档](docs/api/)（即将推出）
 - [部署指南](docs/tutorials/deployment.md)（即将推出）
+
+### 开发者指南
+
+- [打包和发布流程](PUBLISHING.md) - 如何发布到 PyPI
+- [贡献指南](CONTRIBUTING.md)（即将推出）
+- [开发环境设置](docs/development/)（即将推出）
 
 ### 参考文献
 

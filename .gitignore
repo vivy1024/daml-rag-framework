@@ -16,20 +16,41 @@ parts/
 sdist/
 var/
 wheels/
-pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
 
-# Virtual Environment
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Environments
+.env
+.venv
+env/
 venv/
 ENV/
-env/
-.venv
+env.bak/
+venv.bak/
 
-# IDE
+# IDEs
 .vscode/
 .idea/
 *.swp
@@ -37,64 +58,33 @@ env/
 *~
 .DS_Store
 
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# pytest
-.pytest_cache/
-.coverage
-htmlcov/
-*.cover
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
 # Project specific
+daml-rag-core/
+daml-rag-retrieval/
+daml-rag-learning/
+daml-rag-orchestration/
+daml-rag-adapters/
+daml-rag-cli/
+
+# Build artifacts
+*.whl
+.pypirc
+
+# Logs
 *.log
+
+# Database
 *.db
 *.sqlite3
 
-# Data files
-data/
-*.csv
-*.json
-!examples/**/*.json
-!tests/**/*.json
-
-# Vector databases
-vector_store/
-*.faiss
-*.index
-
-# Knowledge graphs
-knowledge_graph.db
-*.neo4j
-
-# Secrets
-.env
-.env.local
-secrets/
-*.pem
-*.key
-
-# Copyright application materials (sensitive, not for public)
-docs/copyright/
-
-# Docker
-*.log
-docker-compose.override.yml
-
 # Temporary files
-tmp/
-temp/
 *.tmp
+*.bak
+PACKAGING_PLAN.md
+PACKAGING_COMPLETE.md
+TEST_REPORT.md
 
-# OS
-Thumbs.db
-.DS_Store
-
+# Sensitive files
+.pypirc
+*.token
+*.secret

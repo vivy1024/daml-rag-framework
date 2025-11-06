@@ -103,19 +103,15 @@ Changelog = "https://github.com/vivy1024/daml-rag-framework/blob/main/CHANGELOG.
 "References" = "https://github.com/vivy1024/daml-rag-framework/blob/main/REFERENCES.md"
 
 [project.scripts]
-daml-rag = "daml_rag_cli.cli:main"
+daml-rag = "daml_rag.cli.cli:main"
 
 [tool.setuptools]
 package-dir = {"" = "."}
-packages = [
-    "daml_rag",
-    "daml_rag_core",
-    "daml_rag_retrieval",
-    "daml_rag_orchestration",
-    "daml_rag_learning",
-    "daml_rag_adapters",
-    "daml_rag_cli",
-]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["daml_rag*"]
+exclude = ["tests*", "examples*", "docs*", "daml-rag-*"]
 
 [tool.setuptools.package-data]
 "*" = ["*.yaml", "*.yml", "*.json"]

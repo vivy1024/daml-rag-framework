@@ -1,0 +1,51 @@
+# DAML-RAG Framework - 打包清单
+# 指定哪些文件需要包含在发布包中
+
+# 核心文档
+include README.md
+include README_EN.md
+include LICENSE
+include NOTICE
+include CHANGELOG.md
+include REFERENCES.md
+include LIMITATIONS.md
+include CONTRIBUTING.md
+include CITATION.cff
+
+# 配置文件
+include requirements.txt
+include pyproject.toml
+
+# 包含示例配置
+recursive-include daml_rag *.yaml
+recursive-include daml_rag *.yml
+recursive-include daml_rag *.json
+
+# 理论文档（可选，供学习参考）
+recursive-include docs *.md
+recursive-include docs *.txt
+
+# 排除不需要的文件
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * *.so
+recursive-exclude * .DS_Store
+recursive-exclude * .git*
+recursive-exclude tests *
+recursive-exclude examples *.pyc
+recursive-exclude promotional-materials *
+recursive-exclude docker *
+
+# 排除旧的目录结构
+recursive-exclude daml-rag-core *
+recursive-exclude daml-rag-retrieval *
+recursive-exclude daml-rag-learning *
+recursive-exclude daml-rag-orchestration *
+recursive-exclude daml-rag-adapters *
+recursive-exclude daml-rag-cli *
+
+# 排除构建产物
+global-exclude *.egg-info
+global-exclude .coverage
+global-exclude htmlcov
+
