@@ -4,7 +4,10 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-1.0.0-orange.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-1.3.0-orange.svg)](CHANGELOG.md)
+[![Package Status](https://img.shields.io/badge/Package-Ready_to_Publish-brightgreen.svg)](PUBLISHING.md)
+[![Build](https://img.shields.io/badge/Build-Passing-success.svg)](scripts/build.sh)
+[![PyPI](https://img.shields.io/badge/PyPI-v1.3.0-blue.svg)](https://pypi.org/project/daml-rag-framework/)
 
 English | **[简体中文](README.md)**
 
@@ -43,6 +46,12 @@ DAML-RAG is a production-ready framework that integrates proven techniques—Gra
 
 - 🎯 **GraphRAG Hybrid Retrieval**: Vector + Graph + Rules three-tier architecture
 - 🧠 **In-Context Learning** ⭐(v2.0 corrected): Few-Shot + Case-Based Reasoning for quality maintenance
+- 🔬 **Thompson Sampling Learning** ⚠️(v1.3.0 theoretical component): Adaptive tool selection for multi-MCP competition scenarios
+  - Bayesian MAB algorithm with Beta distribution uncertainty modeling
+  - Contextual Bandit for personalized recommendations
+  - ε-Greedy exploration strategy
+  - Applicable for ≥2 MCP servers, >1000 interaction samples, A/B testing scenarios
+  - Archived for future expansion and multi-MCP reference
 - ⚡ **Teacher-Student Model**: DeepSeek (teacher) + Ollama (student) for cost reduction
 - 🔌 **MCP Orchestration**: Standardized multi-agent collaboration via Model Context Protocol
 - 🛡️ **Quality Assurance**: Automatic quality monitoring and escalation

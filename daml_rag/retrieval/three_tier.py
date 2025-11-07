@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-玉珍健身 框架 三层检索系统
+daml-rag-framework 三层检索系统
 集成向量检索、知识图谱和规则过滤的完整检索系统
 """
 

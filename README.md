@@ -4,10 +4,10 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-1.2.0-orange.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-1.3.0-orange.svg)](CHANGELOG.md)
 [![Package Status](https://img.shields.io/badge/Package-Ready_to_Publish-brightgreen.svg)](PUBLISHING.md)
 [![Build](https://img.shields.io/badge/Build-Passing-success.svg)](scripts/build.sh)
-[![PyPI](https://img.shields.io/badge/PyPI-v1.2.0-blue.svg)](https://pypi.org/project/daml-rag-framework/)
+[![PyPI](https://img.shields.io/badge/PyPI-v1.3.0-blue.svg)](https://pypi.org/project/daml-rag-framework/)
 
 **[English](README_EN.md)** | 简体中文
 
@@ -80,6 +80,13 @@ DAML-RAG是一个**生产就绪框架**，整合了经过验证的技术——Gr
   - **经验记忆**：存储历史最佳实践
   - **相似度匹配**：智能召回相关案例
   - **动态注入**：实时构建Few-Shot上下文
+
+- 🔬 **Thompson Sampling学习** ⚠️(v1.3.0理论组件)：多MCP竞争场景的自适应工具选择
+  - **贝叶斯MAB算法**：基于Beta分布的不确定性建模
+  - **Contextual Bandit**：考虑查询上下文的个性化推荐
+  - **ε-Greedy探索**：动态平衡探索与利用
+  - **适用场景**：≥2个MCP服务器、>1000次交互样本、A/B测试需求
+  - **理论存档**：供未来扩展和多MCP场景参考
 
 ### ⚡ 模型系统
 
