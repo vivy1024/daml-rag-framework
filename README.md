@@ -1,22 +1,20 @@
-# DAML-RAG 框架
+# DAML-RAG框架 v2.0
 
-**领域自适应元学习RAG** - 面向垂直领域AI应用的生产就绪框架
+**Domain Adaptive Multi-source Learning RAG Framework**
+
+面向垂直领域的自适应多源学习型检索增强生成框架
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-1.3.0-orange.svg)](CHANGELOG.md)
-[![Package Status](https://img.shields.io/badge/Package-Ready_to_Publish-brightgreen.svg)](PUBLISHING.md)
-[![Build](https://img.shields.io/badge/Build-Passing-success.svg)](scripts/build.sh)
-[![PyPI](https://img.shields.io/badge/PyPI-v1.3.0-blue.svg)](https://pypi.org/project/daml-rag-framework/)
+[![Version](https://img.shields.io/badge/Version-2.0.0-orange.svg)](CHANGELOG.md)
+[![Framework Status](https://img.shields.io/badge/Status-Phase_2_Complete-brightgreen.svg)](docs/progress.md)
 
-**[English](README_EN.md)** | 简体中文
-
-> 🎓 **结合GraphRAG、上下文学习、多智能体协同，打造成本高效的垂直领域AI系统**  
-> 🚀 **生产就绪框架，实现Token优化和成本控制的工程最佳实践**
+> 🎯 **接口驱动设计 + 组件注册系统 + 三层检索架构**
+> 🚀 **生产就绪的企业级RAG框架**
 
 ---
 
-## 📑 目录
+## 📋 目录
 
 - [项目简介](#-项目简介)
 - [核心特性](#-核心特性)
@@ -43,80 +41,83 @@
 
 ## 📖 项目简介
 
-DAML-RAG是一个**生产就绪框架**，整合了经过验证的技术——GraphRAG混合检索、上下文学习、教师-学生协同和基于MCP的多智能体编排——用于构建垂直领域AI应用，实现Token节省和成本优化。
+DAML-RAG v2.0是一个**企业级RAG框架**，采用接口驱动设计和现代软件架构，为垂直领域AI应用提供生产就绪的解决方案。
 
-**不是新理论，而是面向实践者的工程最佳实践框架。**
+**核心设计理念**：接口驱动、组件化、可扩展、高性能。
 
-### 🔬 学术定位
+### 🏗️ v2.0架构革新
 
-#### DAML-RAG 是什么 ✅
+#### 全新特性 ✅
 
-- **工程框架**：系统整合RAG [1]、GraphRAG [2]、ICL [3]、知识图谱 [4]
-- **生产系统**：在玉珍健身领域经过验证
-- **成本优化**：通过教师-学生协同降低成本
-- **垂直领域聚焦**：专为知识密集型领域设计
+- **接口驱动设计**：5层标准接口体系，确保组件解耦和可替换性
+- **组件注册系统**：自动发现、依赖注入、生命周期管理
+- **三层检索架构**：语义检索→图谱检索→约束验证的渐进式精确化
+- **多模式向量引擎**：BGE-M3支持dense、sparse、colbert三种模式
+- **智能约束验证**：专业领域安全检查和质量保证系统
+- **多策略重排序**：动态权重融合和多样性优化算法
 
-#### DAML-RAG 不是什么 ❌
+#### 设计原则
 
-- ❌ **不是新的ML/AI理论**：没有创新算法或学习范式
-- ❌ **不声称通用优越性**：为特定用例设计
-- ❌ **不是自动化领域适配**：需要领域专家构建知识图谱
-- ❌ **不是推理时"元学习"**：正确术语是"上下文学习"（v2.0修正）
+- **接口优先**：所有组件基于标准接口，支持热插拔替换
+- **异步编程**：全面采用async/await，提升并发性能
+- **类型安全**：完整的Python类型提示，减少运行时错误
+- **配置化**：支持YAML配置文件和环境变量覆盖
+- **可监控**：内置指标收集和性能监控
 
 ---
 
 ## 🎯 核心特性
 
-### 🔍 检索系统
+### 🏗️ 接口驱动架构
 
-- 🎯 **GraphRAG混合检索**：向量 + 图谱 + 规则三层架构
-  - **向量层**：快速语义召回（Qdrant/FAISS/Milvus）
-  - **图谱层**：精确关系推理（Neo4j/ArangoDB）
-  - **规则层**：业务逻辑验证（动态规则引擎）
+- **🔧 5层标准接口体系**
+  - **基础接口**：`IComponent`, `IConfigurable`, `IMonitorable`
+  - **检索接口**：`IRetriever`, `ISemanticRetriever`, `IGraphRetriever`
+  - **编排接口**：`IOrchestrator`, `IToolRegistry`, `ITaskExecutor`
+  - **质量接口**：`IQualityChecker`, `IAntiHallucinationChecker`
+  - **存储接口**：`IVectorStorage`, `IGraphStorage`, `IDocumentStorage`
 
-### 🧠 学习系统
+### 🔍 三层检索引擎
 
-- 🧠 **上下文学习** ⭐(v2.0修正)：Few-Shot + 案例推理维持质量
-  - **经验记忆**：存储历史最佳实践
-  - **相似度匹配**：智能召回相关案例
-  - **动态注入**：实时构建Few-Shot上下文
+- **渐进式精确化架构**：语义→图谱→约束验证
+  - **语义检索层**：BGE-M3多模式向量匹配，支持dense/sparse/colbert
+  - **图谱检索层**：基于Neo4j的关系推理和路径发现
+  - **约束验证层**：专业安全规则和质量检查
 
-- 🔬 **Thompson Sampling学习** ⚠️(v1.3.0理论组件)：多MCP竞争场景的自适应工具选择
-  - **贝叶斯MAB算法**：基于Beta分布的不确定性建模
-  - **Contextual Bandit**：考虑查询上下文的个性化推荐
-  - **ε-Greedy探索**：动态平衡探索与利用
-  - **适用场景**：≥2个MCP服务器、>1000次交互样本、A/B测试需求
-  - **理论存档**：供未来扩展和多MCP场景参考
+### 🧦 组件注册系统
 
-### ⚡ 模型系统
+- **IoC容器**：支持单例、瞬态、作用域三种生命周期
+- **自动装配**：基于类型注解的依赖注入
+- **组件发现**：支持包扫描和装饰器注册
+- **配置管理**：分层次配置和热更新
 
-- ⚡ **教师-学生模型**：DeepSeek（教师）+ Ollama（学生）降低成本
-  - **智能路由**：根据查询复杂度自动选择模型
-  - **质量监控**：自动检测学生模型输出质量
-  - **动态升级**：质量不足时自动切换教师模型
+### 📦 存储抽象层
 
-### 🎯 智能分类
+- **统一接口**：屏蔽底层存储差异
+- **多种存储**：向量、图、文档、缓存、会话5种类型
+- **性能优化**：连接池、批量操作、重试机制
+- **监控支持**：内置指标收集和健康检查
 
-- 🎯 **BGE智能分类** ⭐(v1.1.0新增)：基于向量语义的查询复杂度分类
-  - **向量模型**：BAAI/bge-base-zh-v1.5 中文优化
-  - **语义理解**：余弦相似度自动分类（> 0.7 复杂查询）
-  - **成本优化**：智能选择教师/学生模型
-  - **性能优化**：懒加载 + 向量缓存 + 关键词兜底
+### ⚡ BGE-M3增强引擎
 
-### 🔌 编排系统
+- **多模式支持**：Dense、Sparse、ColBERT三种向量表示
+- **智能策略**：根据查询特征自动选择最优检索策略
+- **批量处理**：支持向量化编码和批量搜索
+- **缓存优化**：多级缓存提升重复查询性能
 
-- 🔌 **MCP编排** ⭐(v1.2.0新增)：基于Kahn拓扑排序的智能任务编排
-  - **DAG任务分解**：自动识别工具依赖关系
-  - **异步并行执行**：最大化吞吐量（2x+ 性能提升）
-  - **循环检测**：DFS算法防止死循环
-  - **TTL缓存**：避免重复调用（100x 加速）
+### 🛡️ 智能约束验证
 
-### 🛡️ 质量保障
+- **多维度验证**：安全性、医疗性、专业规则、设备约束
+- **可配置规则**：支持动态规则加载和热更新
+- **风险评估**：多级风险等级和相应处理策略
+- **证据验证**：基于ACSM/NSCA等权威标准
 
-- 📊 **生产就绪**：完整的监控、缓存、容错系统
-  - **健康检查**：实时监控服务状态
-  - **优雅降级**：服务故障时自动切换
-  - **执行统计**：详细的性能指标
+### 🔄 多策略重排序
+
+- **融合算法**：加权融合、倒数排名、Borda投票
+- **多样性优化**：保证结果多样性的同时提升质量
+- **个性化排序**：基于用户历史和偏好调整排序
+- **时效性考虑**：支持时间衰减和新鲜度提升
 
 ---
 
@@ -124,28 +125,16 @@ DAML-RAG是一个**生产就绪框架**，整合了经过验证的技术——Gr
 
 ### 安装指南
 
-#### 方式1：从 PyPI 安装（推荐）✅
+#### 方式1：从源码安装（当前推荐）
 
-最简单的安装方式：
-
-```bash
-# 基础安装
-pip install daml-rag-framework
-
-# 验证安装
-python -c "import daml_rag; print(f'✅ 安装成功！版本：{daml_rag.__version__}')"
-```
-
-#### 方式2：从源码安装（开发者）
-
-适合需要修改源码或参与开发：
+DAML-RAG v2.0目前处于开发阶段，建议从源码安装：
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/vivy1024/daml-rag-framework.git
+git clone https://github.com/your-org/daml-rag-framework.git
 cd daml-rag-framework
 
-# 2. 创建虚拟环境（推荐）
+# 2. 创建虚拟环境
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 # 或 venv\Scripts\activate  # Windows
@@ -157,111 +146,220 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-#### 方式3：Docker 安装（生产环境）
-
-适合生产部署：
+#### 方式2：使用Docker
 
 ```bash
-# 1. 使用 Docker Compose（推荐）
-docker-compose up -d
+# 构建镜像
+docker build -t daml-rag-framework:2.0 .
 
-# 2. 或使用 Dockerfile
-docker build -t daml-rag-app .
-docker run -p 8000:8000 daml-rag-app
+# 运行容器
+docker run -p 8000:8000 daml-rag-framework:2.0
 ```
-
-**PyPI 页面**: https://pypi.org/project/daml-rag-framework/
 
 ---
 
-### 5分钟快速上手
+### 5分钟快速上手：v2.0框架
 
 #### 步骤1：创建项目目录
 
 ```bash
-mkdir my-ai-app
-cd my-ai-app
+mkdir my-rag-app
+cd my-rag-app
 ```
 
-#### 步骤2：创建配置文件
+#### 步骤2：编写基础代码
 
-创建 `config.yaml`：
-
-```yaml
-# 基础配置
-domain: fitness
-debug: true
-
-# 检索配置
-retrieval:
-  vector_model: "BAAI/bge-base-zh-v1.5"
-  vector_store: "qdrant"
-  top_k: 5
-  similarity_threshold: 0.6
-
-# 模型配置
-learning:
-  teacher_model: "deepseek"
-  student_model: "ollama-qwen2.5"
-  experience_threshold: 3.5
-```
-
-#### 步骤3：编写应用代码
-
-创建 `app.py`：
+创建 `main.py`：
 
 ```python
 import asyncio
-from daml_rag import DAMLRAGFramework, DAMLRAGConfig
+from daml_rag_framework import (
+    ThreeLayerRetriever, VectorRetriever, GraphRetriever,
+    ConstraintValidator, Reranker, QueryAnalyzer,
+    initialize_framework
+)
 
 async def main():
-    # 加载配置
-    config = DAMLRAGConfig.from_file("config.yaml")
-    
-    # 创建框架实例
-    framework = DAMLRAGFramework(config)
-    await framework.initialize()
-    
-    # 处理查询
-    result = await framework.process_query(
-        query="推荐5个增肌训练动作",
-        user_context={"user_id": "demo_user"}
+    print("🚀 初始化DAML-RAG框架 v2.0...")
+
+    # 1. 初始化框架
+    config = {
+        'retrieval': {
+            'strategy': 'balanced',
+            'semantic_weight': 0.3,
+            'graph_weight': 0.5,
+            'constraint_weight': 0.2
+        },
+        'vector': {
+            'model_name': 'bge-m3',
+            'top_k': 10,
+            'min_similarity': 0.5,
+            'enable_cache': True
+        }
+    }
+
+    success = await initialize_framework(config)
+    if not success:
+        print("❌ 框架初始化失败")
+        return
+
+    # 2. 创建组件
+    vector_retriever = VectorRetriever("vector_retriever")
+    graph_retriever = GraphRetriever("graph_retriever")
+    constraint_validator = ConstraintValidator("constraint_validator")
+    reranker = Reranker("reranker")
+    query_analyzer = QueryAnalyzer("query_analyzer")
+
+    # 3. 配置三层检索引擎
+    three_layer_retriever = ThreeLayerRetriever("main_retriever")
+    three_layer_retriever.set_semantic_retriever(vector_retriever)
+    three_layer_retriever.set_graph_retriever(graph_retriever)
+    three_layer_retriever.set_constraint_validator(constraint_validator)
+
+    # 4. 初始化组件
+    await vector_retriever.initialize(config.get('vector', {}))
+    await graph_retriever.initialize(config.get('graph', {}))
+    await constraint_validator.initialize(config.get('constraint', {}))
+    await reranker.initialize(config.get('reranking', {}))
+    await query_analyzer.initialize(config.get('analysis', {}))
+    await three_layer_retriever.initialize(config.get('retrieval', {}))
+
+    print("✅ 所有组件初始化完成")
+
+    # 5. 处理查询
+    query = "推荐5个不伤膝盖的腿部训练动作"
+    print(f"\n🔍 处理查询: {query}")
+
+    # 分析查询
+    analysis = await query_analyzer.analyze_query(query)
+    print(f"📊 查询分析: {analysis.intent.value}, {analysis.complexity.value}")
+    print(f"🏷️  识别实体: {[(e, t.value) for e, t in analysis.entities]}")
+
+    # 执行三层检索
+    from daml_rag_framework.interfaces.retrieval import QueryRequest
+    request = QueryRequest(
+        query_id="demo_001",
+        query_text=query,
+        domain="fitness",
+        top_k=5,
+        min_similarity=0.5,
+        mode="hybrid"
     )
-    
+
+    response = await three_layer_retriever.retrieve(request)
+    print(f"📋 检索结果: {len(response.results)} 个结果")
+    print(f"⏱️  执行时间: {response.execution_time:.3f}s")
+
+    # 重排序结果
+    reranked = await reranker.rerank(response.results, request)
+    print(f"🔄 重排序完成: {len(reranked.reranked_results)} 个结果")
+
     # 输出结果
-    print(f"回答: {result.response}")
-    print(f"使用模型: {result.model_used}")
-    print(f"Token消耗: {result.tokens}")
-    print(f"耗时: {result.elapsed_time}s")
+    print("\n📝 推荐的训练动作:")
+    for i, result in enumerate(reranked.reranked_results[:5], 1):
+        print(f"{i}. {result.content[:50]}...")
+        print(f"   评分: {result.score:.3f}")
+        print(f"   来源: {result.metadata.get('source', 'unknown')}")
+        print()
+
+    # 6. 显示统计信息
+    print("📊 组件统计:")
+    print(f"   向量检索器: {vector_retriever.get_metrics()}")
+    print(f"   图检索器: {graph_retriever.get_metrics()}")
+    print(f"   约束验证器: {constraint_validator.get_metrics()}")
+    print(f"   重排序器: {reranker.get_metrics()}")
 
 if __name__ == "__main__":
     asyncio.run(main())
 ```
 
+#### 步骤3：创建配置文件
+
+创建 `config.yaml`：
+
+```yaml
+# DAML-RAG v2.0 配置示例
+framework:
+  name: "daml_rag_v2"
+  version: "2.0.0"
+  debug: true
+
+retrieval:
+  strategy: "balanced"
+  semantic_weight: 0.3
+  graph_weight: 0.5
+  constraint_weight: 0.2
+  enable_parallel: true
+
+vector:
+  model_name: "BAAI/bge-m3"
+  device: "cpu"  # 或 "cuda"
+  top_k: 20
+  min_similarity: 0.5
+  enable_cache: true
+  cache_ttl: 300
+
+graph:
+  max_depth: 3
+  max_nodes: 100
+  enable_safety_filter: true
+  enable_evidence_filter: true
+  min_evidence_level: 0.5
+
+constraint:
+  enable_safety_check: true
+  enable_domain_rules: true
+  enable_evidence_validation: true
+
+reranking:
+  primary_strategy: "weighted_fusion"
+  enable_diversity_promotion: true
+  diversity_threshold: 0.7
+  enable_recency_boost: true
+
+analysis:
+  enable_intent_recognition: true
+  enable_entity_extraction: true
+  enable_relation_extraction: true
+```
+
 #### 步骤4：运行应用
 
 ```bash
-python app.py
+python main.py
 ```
 
-**输出示例**：
+**预期输出**：
 
 ```
-✅ 框架初始化完成
-🔍 检索相关知识...
-🧠 使用学生模型生成回答...
-✅ 质量检查通过
+🚀 初始化DAML-RAG框架 v2.0...
+✅ 所有组件初始化完成
 
-回答: 根据您的需求，推荐以下5个增肌训练动作：
-1. 杠铃深蹲 - 腿部核心动作
-2. 杠铃卧推 - 胸部主要训练
-3. 引体向上 - 背部发展
-4. 杠铃硬拉 - 全身力量
-5. 杠铃推举 - 肩部训练
+🔍 处理查询: 推荐5个不伤膝盖的腿部训练动作
+📊 查询分析: recommendation, moderate
+🏷️  识别实体: [('腿部', 'muscle'), ('膝盖', 'injury'), ('训练', 'goal')]
+📋 检索结果: 8 个结果
+⏱️  执行时间: 1.234s
+🔄 重排序完成: 8 个结果
 
-使用模型: ollama-qwen2.5
-Token消耗: 520
-耗时: 2.3s
+📝 推荐的训练动作:
+1. 保加利亚分腿蹲 - 单腿训练动作，对膝盖压力小...
+   评分: 0.923
+   来源: vector_layer + graph_layer + constraint_layer
+
+2. 腿举 - 固定器械训练，安全性高...
+   评分: 0.889
+   来源: vector_layer + constraint_layer
+
+3. 臀桥 - 臀部训练，对膝盖友好...
+   评分: 0.876
+   来源: vector_layer + graph_layer
+
+📊 组件统计:
+   向量检索器: {'total_queries': 1, 'cache_hit_rate': 0.0, ...}
+   图检索器: {'total_queries': 1, 'path_discoveries': 2, ...}
+   约束验证器: {'total_validations': 8, 'safety_blocks': 1, ...}
+   重排序器: {'total_rerankings': 1, 'diversity_improvements': 1, ...}
 ```
 
 ---

@@ -1,47 +1,55 @@
-# 玉珍健身框架依赖包
-# 基于三层检索系统的智能RAG框架
+# DAML-RAG框架 v2.0 依赖文件
+# 面向垂直领域的自适应多源学习型RAG框架
 
-# 核心框架依赖
-asyncio-throttle>=1.0.2
-aiofiles>=23.2.1
-aiohttp>=3.8.5
-pydantic>=2.4.0
+# Python版本要求: >= 3.8
+typing_extensions>=4.0.0
+
+# 核心依赖
+numpy>=1.21.0
+scipy>=1.7.0
+
+# 异步支持
+aiofiles>=22.1.0
+aiohttp>=3.8.0
+
+# 数据处理和验证
+pandas>=1.5.0
+pydantic>=2.0.0
+
+# 配置管理
+PyYAML>=6.0
 python-dotenv>=1.0.0
 
-# FastAPI和相关依赖
-fastapi>=0.104.0
-uvicorn[standard]>=0.24.0
-python-multipart>=0.0.6
-
-# 向量数据库
-qdrant-client>=1.6.0
-faiss-cpu>=1.7.4
-
-# 知识图谱数据库
-neo4j>=5.12.0
-py2neo>=2021.2.4
-
-# 机器学习和NLP
-numpy>=1.24.3
-scikit-learn>=1.3.0
-sentence-transformers>=2.2.2
-transformers>=4.33.0
-
-# Redis缓存
-redis>=4.6.0
-aioredis>=2.0.1
-
-# 数据处理
-pandas>=2.0.3
-openpyxl>=3.1.2
-
-# HTTP客户端
-httpx>=0.25.0
-requests>=2.31.0
-
 # 日志和监控
-structlog>=23.1.0
-prometheus-client>=0.17.1
+structlog>=22.1.0
+
+# 可选依赖 - 向量检索 (根据需要取消注释)
+qdrant-client>=1.6.0              # Qdrant向量数据库
+faiss-cpu>=1.7.4                  # FAISS向量检索 (CPU)
+sentence-transformers>=2.2.2     # Sentence Transformers
+transformers>=4.33.0               # HuggingFace Transformers
+
+# 可选依赖 - 图数据库 (根据需要取消注释)
+neo4j>=5.12.0                     # Neo4j图数据库
+py2neo>=2021.2.4                  # Neo4j Python驱动
+
+# 可选依赖 - 缓存 (根据需要取消注释)
+redis>=4.6.0                      # Redis
+aioredis>=2.0.1                   # Redis异步客户端
+
+# 可选依赖 - 文档存储 (根据需要取消注释)
+elasticsearch>=8.0.0               # Elasticsearch
+pymongo>=4.3.0                    # MongoDB
+asyncpg>=0.27.0                   # PostgreSQL异步驱动
+
+# 可选依赖 - 机器学习模型 (根据需要取消注释)
+torch>=1.12.0                     # PyTorch (GPU版本可选)
+# torch>=1.12.0+cpu               # PyTorch CPU版本
+FlagEmbedding>=1.1.0             # BGE模型
+
+# 可选依赖 - 外部API (根据需要取消注释)
+openai>=0.27.0                    # OpenAI API
+anthropic>=0.7.0                  # Anthropic API
 
 # 开发和测试工具
 pytest>=7.4.0
@@ -51,8 +59,33 @@ black>=23.7.0
 isort>=5.12.0
 flake8>=6.0.0
 mypy>=1.5.0
+pre-commit>=3.3.0
 
-# 可选GPU支持 (取消注释以启用)
-# faiss-gpu>=1.7.4
-# torch>=2.0.0
-# torchvision>=0.15.0
+# 文档生成
+mkdocs>=1.4.0
+mkdocs-material>=8.5.0
+
+# 性能分析
+memory-profiler>=0.60.0
+line-profiler>=4.0.0
+
+# Jupyter支持 (可选)
+jupyter>=1.0.0
+ipykernel>=6.15.0
+
+# 构建和发布
+build>=0.8.0
+twine>=4.0.0
+
+# FastAPI和相关依赖 (可选，用于Web API)
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+
+# HTTP客户端
+httpx>=0.25.0
+requests>=2.31.0
+
+# GPU支持 (可选，需要CUDA环境)
+# faiss-gpu>=1.7.4                  # FAISS GPU版本
+# torch>=2.0.0+cu118               # PyTorch GPU版本
