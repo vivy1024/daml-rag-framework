@@ -1,53 +1,30 @@
 # -*- coding: utf-8 -*-
 """
-DAML-RAG框架存储模块 v2.0
+Storage Layer - 存储层
 
-提供统一的存储抽象层，支持：
-- 向量存储（Qdrant等）
-- 图存储（Neo4j等）
-- 文档存储（Elasticsearch等）
-- 缓存存储（Redis等）
-- 会话存储
-
-版本：v2.0.0
-更新日期：2025-11-17
+模块：
+- user_memory.py: 用户级向量库管理器
+- vector_store_abstract.py: 向量存储抽象层
+- metadata_database.py: 元数据数据库
 """
 
-# 抽象基类
-from .abstract_storage import (
-    StorageConfig,
-    StorageMetrics,
-    AbstractStorage,
-    AbstractVectorStorage,
-    AbstractGraphStorage,
-    AbstractDocumentStorage
+from .user_memory import UserMemory
+from .vector_store_abstract import (
+    IVectorStore,
+    QdrantVectorStore,
+    FAISSVectorStore,
+    PineconeVectorStore,
+    Distance
 )
-
-# 具体实现（后续添加）
-# from .implementations import (
-#     QdrantVectorStorage,
-#     Neo4jGraphStorage,
-#     ElasticsearchDocumentStorage,
-#     RedisCacheStorage,
-#     MemorySessionStorage
-# )
+from .metadata_database import MetadataDB
 
 __all__ = [
-    # 抽象基类
-    'StorageConfig',
-    'StorageMetrics',
-    'AbstractStorage',
-    'AbstractVectorStorage',
-    'AbstractGraphStorage',
-    'AbstractDocumentStorage',
-
-    # 具体实现（后续添加）
-    # 'QdrantVectorStorage',
-    # 'Neo4jGraphStorage',
-    # 'ElasticsearchDocumentStorage',
-    # 'RedisCacheStorage',
-    # 'MemorySessionStorage'
+    "UserMemory",
+    "IVectorStore",
+    "QdrantVectorStore",
+    "FAISSVectorStore",
+    "PineconeVectorStore",
+    "Distance",
+    "MetadataDB"
 ]
 
-__version__ = "2.0.0"
-__author__ = "DAML-RAG Team"

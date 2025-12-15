@@ -1844,6 +1844,15 @@ daml-rag-framework/
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** 🤝 - 贡献指南
 - **[LICENSE](LICENSE)** 📄 - Apache 2.0许可证
 
+### API文档 📖
+
+- **[快速开始指南](docs/quickstart.md)** - 5分钟快速上手
+- **[框架API参考](docs/api/framework.md)** - 核心框架API
+- **[检索系统API](docs/api/retrieval.md)** - 三层检索系统API
+- **[编排系统API](docs/api/orchestration.md)** - MCP任务编排API
+- **[学习系统API](docs/api/learning.md)** - 智能学习系统API
+- **[配置参考](docs/api/configuration.md)** - 完整配置说明
+
 ### 理论文档
 
 - [理论演进历史](docs/theory/00-理论演进历史.md) ([English](docs/theory/00-THEORY_EVOLUTION.md))

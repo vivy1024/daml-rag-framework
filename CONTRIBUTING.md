@@ -1,6 +1,6 @@
 ﻿# 贡献指南
 
-欢迎为 daml-rag-framework 框架 贡献代码！我们感谢您的每一个贡献。
+欢迎为 daml-rag-framework贡献代码！我们感谢您的每一个贡献。
 
 ## 🤝 如何贡献
 

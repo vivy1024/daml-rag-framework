@@ -1,78 +1,43 @@
 # -*- coding: utf-8 -*-
 """
-DAML-RAG编排系统 v2.0
+框架层编排模块
 
-实现任务编排和工作流管理：
-- 智能工具选择和组合
-- 依赖关系解析和执行
-- 意图识别和查询路由
-- 任务调度和状态管理
+提供通用的DAG编排和工具管理功能。
 
-版本：v2.0.0
-更新日期：2025-11-17
+作者: BUILD_BODY Team
+版本: v1.0.0
+日期: 2025-12-14
 """
 
-# 核心编排器
-from .graphrag_orchestrator import (
-    GraphRAGOrchestrator,
-    IntentMatcher,
-    TaskScheduler,
-    DependencyResolver
-)
-
-# 工具注册系统
 from .tool_registry import (
     ToolRegistry,
-    Tool,
-    ToolContext,
-    ToolResult,
-    ToolCategory
+    ToolMetadata,
+    TaskPriority,
+    ToolAlreadyRegisteredError,
+    ToolNotFoundError
 )
 
-# 工作流引擎
-from .workflow_engine import (
-    WorkflowEngine,
-    Workflow,
-    Task,
-    TaskStatus,
-    WorkflowResult
-)
-
-# 查询分析器
-from .query_analyzer import (
-    QueryAnalyzer,
-    QueryIntent,
-    QueryComplexity,
-    QueryAnalysisResult
+from .generic_dag_orchestrator import (
+    GenericDAGOrchestrator,
+    DAGTask,
+    DAGTemplate,
+    DAGExecutionResult,
+    ExecutionLevel,
+    TaskStatus
 )
 
 __all__ = [
-    # 核心编排
-    'GraphRAGOrchestrator',
-    'IntentMatcher',
-    'TaskScheduler',
-    'DependencyResolver',
-
-    # 工具系统
-    'ToolRegistry',
-    'Tool',
-    'ToolContext',
-    'ToolResult',
-    'ToolCategory',
-
-    # 工作流
-    'WorkflowEngine',
-    'Workflow',
-    'Task',
-    'TaskStatus',
-    'WorkflowResult',
-
-    # 查询分析
-    'QueryAnalyzer',
-    'QueryIntent',
-    'QueryComplexity',
-    'QueryAnalysisResult'
+    # 工具注册表
+    "ToolRegistry",
+    "ToolMetadata",
+    "TaskPriority",
+    "ToolAlreadyRegisteredError",
+    "ToolNotFoundError",
+    # DAG编排器
+    "GenericDAGOrchestrator",
+    "DAGTask",
+    "DAGTemplate",
+    "DAGExecutionResult",
+    "ExecutionLevel",
+    "TaskStatus"
 ]
-
-__version__ = "2.0.0"
-__author__ = "DAML-RAG Team"
